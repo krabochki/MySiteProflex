@@ -91,6 +91,11 @@ body::-webkit-scrollbar-thumb {
 .menubutt,#logo,.btn-hover {
   cursor: pointer;} 
 
+a:-webkit-any-link {
+    color: var(--main-text-color);
+    cursor: pointer;
+}
+
 /*Настройка ссылок*/
 a{
 text-decoration: none;}
