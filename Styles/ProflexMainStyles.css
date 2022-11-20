@@ -90,12 +90,10 @@ body::-webkit-scrollbar-thumb {
 /*Настройка изменения курсора*/
 .menubutt,#logo,.btn-hover {
   cursor: pointer;} 
-
-a:-webkit-any-link {
+  a:-webkit-any-link {
     color: var(--main-text-color);
     cursor: pointer;
 }
-
 /*Настройка ссылок*/
 a{
 text-decoration: none;}
@@ -390,126 +388,80 @@ margin-left:-40px;}
       inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
   }
 
-  .inner1 {
-    display: flex;
-    height: 100vh;
-  
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .btn-liquid {
-    display: inline-block;
-    position: relative;
-    width: 240px;
-    height: 60px;
-  
-    border-radius: 27px;
-  
-    color: #fff;
-    font: 700 14px/60px "Droid Sans", sans-serif;
-    letter-spacing: 0.05em;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  
-  .btn-liquid .inner {
-    position: relative;
-  
-    z-index: 2;
-  }
-  
-  .btn-liquid canvas {
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    bottom: -50px;
-    left: -50px;
-  
-    z-index: 1;
-  }
 
-
+/*Скрытие элементов, присущих только моб. версии*/
+.menuversionmob{
+  display:none;}
+  #MrBullTele {
+    display: none;}
+    #MrBullTele2 {
+      display: none;}
+.menuversionmob2 {
+  display:none;}
+#warningmob{
+    display:none;}
+#footmob {
+  display:none;
+}
   *, *:before, *:after {
     box-sizing: border-box;
   }
 
-  #logofoot {
-    background-color: unset;
-  border:unset;     font-size: 20px;
-
+  #logfut /*Логотип Профлекс*/{
+  font-size: calc(0.9vmax + 14px);
   font-family: 'Montserrat Alternates';
   font-variant-ligatures: none;
   cursor: pointer; 
   transition: all 0.3s ease-in-out;
-  color:var(--main-text-color);
-  }
-  
-  #logofoot:hover{
+  color:var(--main-text-color);}
+  #logfut:hover/*Наведение на логотип*/{
     -webkit-filter: drop-shadow(0px 0px 0px );
     filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
   .footer {   
-
- display: flex;
+    display: flex;
     flex-flow: row wrap;
     padding: 30px 30px 20px 30px;
     color: #2f2f2f;
+    font-size: 14px;
+    font-size: calc(0.7vmax + 7px);
+
     background-color:#9cbbff;
     background-color: rgba(255, 255, 255, 0.2);
     padding-right:  calc(14.5vw - 35px);
-    padding-left:  calc(14.5vw - 35px);
-  }
-  
-.inst,.vk,.telef {
+    padding-left:  calc(14.5vw - 35px);}
+  .inst,.vk,.telef /*Размеры иконок*/ {
   height: 25px;
   width: 25px;
   
-  display: inline-block;
-}
-  .inst {
-    background-image: url("../Pictures/inst.svg");
-
-
-}
-
-li::hover {  text-shadow:  -1.5px 1.5px 1.3px var(--shadows-black);}
-
-
-.telef {
-  background-image: url("../Pictures/tele.png");
-}
-.vk {
-  background-image: url("../Pictures/vk.svg");
-
-}
+  display: inline-block;}
+  .inst /*Иконка инсты*/{
+    background-image: url("../Pictures/inst.svg");}
+  .telef /*Иконка телефона*/{
+  background-image: url("../Pictures/tele.png");}
+  .vk /*Иконка вк*/{
+  background-image: url("../Pictures/vk.svg");}
   .footer > * {
-    flex:  1 100%;
-  }
+    flex:  1 100%;}
+  .footer__addr { /*Объединияет 1 столбец до иконок*/
+}
   
-  .footer__addr {
-    margin-right: 1.25em;
-    margin-bottom: 2em;
-  }
-  
-  
+   /*Кнопка "Контакты*/
   .footer__addr h2 {
     margin-top: 1.3em;
-    font-size: 15px;
+    font-size: calc(0.7vmax + 7px);
+    font-weight: 400;}
+  
+  .nav__title /*Заголовок столбцов 2 3 4*/ {
     font-weight: 400;
+    font-size: calc(0.7vmax + 7px);
   }
   
-  .nav__title {
-    font-weight: 400;
-    font-size: 15px;
-  }
-  
-  .footer address {
+  .footer address /*Объединяет сайт, емайл и значки*/ {
     font-style: normal;
     color: #999;
   }
   
-  .footer__btn {
+  .footer__btn /*Кнопка почты и сайта*/ {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -520,70 +472,95 @@ li::hover {  text-shadow:  -1.5px 1.5px 1.3px var(--shadows-black);}
     color: #2f2f2f;
     line-height: 0;
     margin: 0.6em 0;
-    font-size: 1rem;
+    font-size: calc(0.7vmax + 7px);
     padding: 0 1.3em;
   }
   
-  .footer ul {
+  .footer ul /*Настройка списков*/{
     list-style: none;
     padding-left: 0;
   }
   
-  .footer li {
-    line-height: 2em;
-  }
-  
+ address {
+  margin-bottom: calc(15px + 4vw);
+ }
+
+
+  li h2 {
+    transition: all 0.3s ease-in-out; }
+  li h2:hover{
+    cursor:pointer;        color:var(--main-red-color);
+    text-shadow:  -1px 1px 1.3px var(--shadows-black);}
+  li ul :hover {
+  cursor:pointer;        color:var(--main-blue-color);
+    text-shadow:  -1px 1px 1.3px var(--shadows-black);}
+ 
+
+  .footer li /*Ячейка списка, либо со столбцов (3), либо со строк*/ {
+    line-height: 2em;} 
   .footer a {
-    text-decoration: none;
-  }
+    text-decoration: none; }
   
-  .footer__nav {
+  .footer__nav /*Все три столбца 2 3 4 в качестве одного списка */ {
     display: flex;
     flex-flow: row wrap;
+    margin-left:25px;
   }
   
-  .footer__nav > * {
-    flex: 1 50%;
-    margin-right: 1.25em;
-  }
+
   
   .nav__ul a {
     color: #999;
   }
   
+ /*Столбец - список с 2 столбцами*/
   .nav__ul--extra {
     column-count: 2;
     column-gap: 1.25em;
   }
   
-  .legal {
-    display: flex;
-    flex-wrap: wrap;
-    color: #999;
+  #xz1 {    color: #999;
+
+    position:absolute
   }
-    
-  .legal__links {
-    display: flex;
-    align-items: center;
+  #xz2{     color: #999;
+    text-align: right;
   }
-  
+
   .heart {
-    color: #2f2f2f;
-    font-size: ;
-    font-family: :'Courier New', Courier, monospace;
-  }
+    font-family:'Courier New', Courier, monospace;}
   
-  @media screen and (min-width: 24.375em) {
+  @media screen and (max-width: 600px) {
     .legal .legal__links {
+      display: block;
+
       margin-left: auto;
+
+    } 
+  .footer {
+    font-size: calc(0.5vmax + 7px);}
+
+    .nav__title /*Заголовок столбцов 2 3 4*/ {
+      font-size: calc(0.6vmax + 6.5px);
     }
-  }
+    
+
+
   
-  @media screen and (min-width: 40.375em) {
+  #xz1 {
+    position:initial;
+  }
+#xz2 {text-align: left;}}
+  
+
+  @media screen and (min-width: 520px) {
     .footer__nav > * {
       flex: 1;
     }
-    
+    .footer__logo {
+margin:0;
+padding:0;
+    }
     .nav__item--extra {
       flex-grow: 2;
     }
@@ -597,18 +574,58 @@ li::hover {  text-shadow:  -1.5px 1.5px 1.3px var(--shadows-black);}
     }
   }
 
+  @media screen and (max-width:520px) {
+    .footer {
 
-/*Скрытие элементов, присущих только моб. версии*/
-.menuversionmob{
-  display:none;}
-  #MrBullTele {
-    display: none;}
-    #MrBullTele2 {
-      display: none;}
-.menuversionmob2 {
-  display:none;}
-#warningmob{
-    display:none;}
+      font-size: calc(0.5vmax + 7px);}
+  
+      .nav__title /*Заголовок столбцов 2 3 4*/ {
+
+        font-size: calc(0.6vmax + 6.4px);
+        text-align: center;
+      }
+
+      .footer__nav /*Все три столбца 2 3 4 в качестве одного списка */ {
+      text-align: center;;
+      }
+
+.footer__nav {
+  text-align: center;
+
+}
+.nav__item {    margin: 0 auto;
+}
+
+#rod
+{
+  text-align: center;
+
+}
+
+#footcomp {
+  display: none;
+}
+#mobfoot2
+{padding:0;
+margin:0;
+}
+address{
+  padding:0px;
+  margin:0px;
+  width: 180px;
+  border:0px;
+  height:46px;
+}
+#footmob{
+  display: inline;
+  position: relative;
+}
+#mobomobo
+{
+float: right;
+}
+}
+
 
 /*МЕДИА ЗАПРОСЫ*/
 
