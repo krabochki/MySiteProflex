@@ -14,7 +14,7 @@
 body /*Отступы, шрифт по умолчанию*/ {
     font-family: 'PT Root UI',Arial;
       margin: 0;
-      padding: 0;
+      padding: 0;overflow: overlay;        
   background:linear-gradient(90deg, var(--main-background-red-color), var(--main-background-blue-color));
     color:var(--main-text-color)}
 
@@ -26,11 +26,16 @@ body /*Отступы, шрифт по умолчанию*/ {
 body::-webkit-scrollbar {
   width: 12px;               /* ширина scrollbar */}
 body::-webkit-scrollbar-track {
-  background: var(--main-background-blue-color);        /* цвет дорожки */}
+  background: transparent;
+  /* цвет дорожки */}
 body::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);    /* цвет плашки */
   border-radius: 20px;       /* закругления плашки */
   border: 3px solid var(--main-background-blue-color);  /* padding вокруг плашки */}
+
+
+
+
 
 @font-face /* Шрифт основного текста*/{
   font-family: 'PT Root UI';
@@ -63,7 +68,27 @@ body::-webkit-scrollbar-thumb {
     url(../Fonts/JustTextRegular.woff) format('woff'),
     url(../Fonts/JustTextRegular.woff2) format('woff2');
     font-weight: 400;
+    font-style: normal;
+}
+  
+@font-face /* Шрифт основного текста*/{
+  font-family: 'PT Root UI';
+  src: 
+      url(../Fonts/JustTextLight.ttf) format('woff2'),
+      url(../Fonts/JustTextLight.woff) format('woff'),
+      url(../Fonts/JustTextLight.ttf) format('ttf');
+  font-weight: lighter;
+  font-style: normal;}  
+  @font-face /* Шрифт основного текста*/{
+    font-family: 'Montserrat Alternates';
+    src: 
+        url(../Fonts/HeadingsLight.ttf) format('woff2'),
+        url(../Fonts/HeadingsLight.woff) format('woff'),
+        url(../Fonts/HeadingsLight.ttf) format('ttf');
+    font-weight: lighter;
     font-style: normal;}
+  
+
 
 /*Настройки градиентных кнопок*/
 .btn-hover { /*Общие настройки*/ 
@@ -177,9 +202,9 @@ overflow: hidden;}
 input{
   margin-left: 4%;
   margin-top: 3%;
-  height: 3.6vw;
+  height: 3.9vw;
   background-color: var(--main-white-color);
-  width:50%;
+  width:53%;
   border-radius: 1vw;
   border-color:#ffc5ca;
   border-style: solid;
@@ -389,6 +414,82 @@ margin-left:-40px;}
   }
 
 
+  .stolbbutt{
+    margin-top: 0.5vw; white-space: pre-wrap;
+  }
+  .stolbmain,.stolbbutt {
+    color: rgb(134, 134, 134);
+    transition: all 0.3s ease-in-out; }
+  .stolbmain:hover,.stolbbutt:hover{
+    cursor:pointer;
+    text-shadow:  -1px 1px 1.3px var(--shadows-black);}
+  .stolbmain:hover {
+    color:var(--main-red-color)
+  }
+  .stolbbutt:hover {
+    color: var(--main-blue-color);
+  }
+  #footerlinks:visited {
+    color: rgb(134, 134, 134);
+  }
+  #footerlinks {
+    color :rgb(134, 134, 134);
+  }
+.bobo {width:100%;     font-size: calc(0.7vmax + 7px);
+font-weight: lighter;
+height:100px;     margin-top: 10px;
+padding: 30px 30px 20px 30px;
+height:fit-content;
+font-variant-ligatures: none;
+padding-right:  calc(14.5vw - 35px);
+padding-left:  calc(14.5vw - 35px);
+color:rgb(134, 134, 134);
+background-color: rgba(255, 255, 255, 0.2);}
+.stolb {width:fit-content;
+  height:90%;
+  display: inline-block;
+  margin:0px;
+  padding: 0px;}
+.footbtn /*Кнопка почты и сайта*/ {
+align-items: center;
+align-content: center;
+  display: block;
+  width: calc(70px + 2.8vw);
+  text-align: center;
+  color:rgb(134, 134, 134);
+  padding-top: 0.3vw;
+  padding-bottom: 0.3vw;
+  background-color: rgb(33, 33, 33, 0.05);
+  border-radius: 100px;
+  margin-top: 0.5em;
+    transition: all 0.3s ease-in-out; 
+}
+.footbtn:hover {
+  background-color: rgb(33, 33, 33, 0.10);
+  color:rgb(85, 85, 85);
+
+
+}
+.stolbmain, #stolbcont {
+  font-size: calc(0.72vmax + 7.2px);
+  margin-bottom: 1vw;   font-family: 'Montserrat Alternates';
+
+}
+#stolblog /*Логотип Профлекс*/{
+  font-size: calc(0.9vmax + 14px);
+  font-family: 'Montserrat Alternates';
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 1vw;
+  font-variant-ligatures: none;
+  cursor: pointer; 
+  transition: all 0.3s ease-in-out;
+  color:var(--main-text-color);
+}
+  #stolblog:hover/*Наведение на логотип*/{
+    -webkit-filter: drop-shadow(0px 0px 0px );
+    filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
+
 /*Скрытие элементов, присущих только моб. версии*/
 .menuversionmob{
   display:none;}
@@ -400,125 +501,24 @@ margin-left:-40px;}
   display:none;}
 #warningmob{
     display:none;}
-#footmob {
-  display:none;
-}
-  *, *:before, *:after {
-    box-sizing: border-box;
-  }
 
-  #logfut /*Логотип Профлекс*/{
-  font-size: calc(0.9vmax + 14px);
-  font-family: 'Montserrat Alternates';
-  font-variant-ligatures: none;
-  cursor: pointer; 
-  transition: all 0.3s ease-in-out;
-  color:var(--main-text-color);}
-  #logfut:hover/*Наведение на логотип*/{
-    -webkit-filter: drop-shadow(0px 0px 0px );
-    filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
-  .footer {   
-    display: flex;
-    flex-flow: row wrap;
-    padding: 30px 30px 20px 30px;
-    color: #2f2f2f;
-    font-size: 14px;
-    font-size: calc(0.7vmax + 7px);
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
 
-    background-color:#9cbbff;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding-right:  calc(14.5vw - 35px);
-    padding-left:  calc(14.5vw - 35px);}
   .inst,.vk,.telef /*Размеры иконок*/ {
-  height: 25px;
-  width: 25px;
+  height: 50px;
+  width: 50px;
+  margin-top: 0.5em;
   
   display: inline-block;}
   .inst /*Иконка инсты*/{
-    background-image: url("../Pictures/inst.svg");}
+    background-image: url("../Pictures/inst.png");}
   .telef /*Иконка телефона*/{
   background-image: url("../Pictures/tele.png");}
   .vk /*Иконка вк*/{
-  background-image: url("../Pictures/vk.svg");}
-  .footer > * {
-    flex:  1 100%;}
-  .footer__addr { /*Объединияет 1 столбец до иконок*/
-}
-  
-   /*Кнопка "Контакты*/
-  .footer__addr h2 {
-    margin-top: 1.3em;
-    font-size: calc(0.7vmax + 7px);
-    font-weight: 400;}
-  
-  .nav__title /*Заголовок столбцов 2 3 4*/ {
-    font-weight: 400;
-    font-size: calc(0.7vmax + 7px);
-  }
-  
-  .footer address /*Объединяет сайт, емайл и значки*/ {
-    font-style: normal;
-    color: #999;
-  }
-  
-  .footer__btn /*Кнопка почты и сайта*/ {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 36px;
-    max-width: max-content;
-    background-color: rgb(33, 33, 33, 0.07);
-    border-radius: 100px;
-    color: #2f2f2f;
-    line-height: 0;
-    margin: 0.6em 0;
-    font-size: calc(0.7vmax + 7px);
-    padding: 0 1.3em;
-  }
-  
-  .footer ul /*Настройка списков*/{
-    list-style: none;
-    padding-left: 0;
-  }
-  
- address {
-  margin-bottom: calc(15px + 4vw);
- }
+  background-image: url("../Pictures/vk.png");}
 
-
-  li h2 {
-    transition: all 0.3s ease-in-out; }
-  li h2:hover{
-    cursor:pointer;        color:var(--main-red-color);
-    text-shadow:  -1px 1px 1.3px var(--shadows-black);}
-  li ul :hover {
-  cursor:pointer;        color:var(--main-blue-color);
-    text-shadow:  -1px 1px 1.3px var(--shadows-black);}
- 
-
-  .footer li /*Ячейка списка, либо со столбцов (3), либо со строк*/ {
-    line-height: 2em;} 
-  .footer a {
-    text-decoration: none; }
-  
-  .footer__nav /*Все три столбца 2 3 4 в качестве одного списка */ {
-    display: flex;
-    flex-flow: row wrap;
-    margin-left:25px;
-  }
-  
-
-  
-  .nav__ul a {
-    color: #999;
-  }
-  
- /*Столбец - список с 2 столбцами*/
-  .nav__ul--extra {
-    column-count: 2;
-    column-gap: 1.25em;
-  }
-  
   #xz1 {    color: #999;
 
     position:absolute
@@ -527,106 +527,14 @@ margin-left:-40px;}
     text-align: right;
   }
 
-  .heart {
-    font-family:'Courier New', Courier, monospace;}
-  
-  @media screen and (max-width: 600px) {
-    .legal .legal__links {
-      display: block;
-
-      margin-left: auto;
-
-    } 
-  .footer {
-    font-size: calc(0.5vmax + 7px);}
-
-    .nav__title /*Заголовок столбцов 2 3 4*/ {
-      font-size: calc(0.6vmax + 6.5px);
-    }
-    
-
-
-  
-  #xz1 {
-    position:initial;
+  #buttonstolb {  
+    padding-left:2em
   }
-#xz2 {text-align: left;}}
-  
-
-  @media screen and (min-width: 520px) {
-    .footer__nav > * {
-      flex: 1;
-    }
-    .footer__logo {
-margin:0;
-padding:0;
-    }
-    .nav__item--extra {
-      flex-grow: 2;
-    }
-    
-    .footer__addr {
-      flex: 1 0px;
-    }
-    
-    .footer__nav {
-      flex: 2 0px;
-    }
-  }
-
-  @media screen and (max-width:520px) {
-    .footer {
-
-      font-size: calc(0.5vmax + 7px);}
-  
-      .nav__title /*Заголовок столбцов 2 3 4*/ {
-
-        font-size: calc(0.6vmax + 6.4px);
-        text-align: center;
-      }
-
-      .footer__nav /*Все три столбца 2 3 4 в качестве одного списка */ {
-      text-align: center;;
-      }
-
-.footer__nav {
-  text-align: center;
-
-}
-.nav__item {    margin: 0 auto;
-}
-
-#rod
-{
-  text-align: center;
-
-}
-
-#footcomp {
+#stolb3mobo {
   display: none;
 }
-#mobfoot2
-{padding:0;
-margin:0;
-}
-address{
-  padding:0px;
-  margin:0px;
-  width: 180px;
-  border:0px;
-  height:46px;
-}
-#footmob{
-  display: inline;
-  position: relative;
-}
-#mobomobo
-{
-float: right;
-}
-}
-
-
+  #buttonstolb1 {  
+    padding-left:10em}
 /*МЕДИА ЗАПРОСЫ*/
 
 @media (max-width:1067px) {
@@ -692,10 +600,17 @@ input {border-radius: 1vw;}
     align-content: center;
     flex-direction: column;
   }}
+@media (max-width:800px) {
 
 
+  #buttonstolb {padding-left:1em;
+  }
 
+  #buttonstolb1 {  padding-left:5em;
+  }
+  
 
+}
 
 /*Настройки для ширины когда нужна 1 строка "Почему это важно"*/
 @media (max-width: 600px) {
@@ -727,6 +642,74 @@ input {border-radius: 1vw;}
 
 /*Настройки для маленьких экранов, где нужно переносить картинки и новое меню*/
 @media (max-width: 600px) {
+
+
+#stolbcont, .stolbmain {
+  font-size: calc(2.5vw + 5px);}
+
+.bobo {
+font-size: calc(2.5vw + 5px);}
+
+#buttonstolb {display: none;}
+
+  #buttonstolb1 { display: none;
+  }
+
+.stolbmob {
+display: inline-block;
+margin-top: 2vw;
+margin-bottom: 2vw;
+padding-left:0.5em;
+padding-right: 0.5em;
+}
+#kkkk
+{
+ 
+  text-align: center;
+}
+.footbtn {
+ 
+  display: inline-block;
+padding:3px;
+padding-top:5px;
+padding-bottom: 5px;
+margin-top:10px;
+width: calc(80px + 2.8vw);
+
+}
+#aaa {
+
+text-align: center;
+width: 100%;
+}
+
+.stolb {
+  width:100%;margin-left: auto;
+  margin-right: auto;
+
+}
+#mobiicon {
+text-align: center;
+margin-bottom: 4vw;
+}
+
+#stolb3mobo {
+
+  display: inline;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#stolblog {
+font-size: calc(5vw + 8px);
+margin-bottom: 5vw;
+  text-align: center;
+}
+#xz1 {
+  position:static;
+}
+#xz2{text-align: left;}
+
   #MrBull  {
     display: none;}
 
@@ -793,7 +776,8 @@ input {border-radius: 1vw;}
     height: 0;}
 
   #MrBullTele {
-    display:inline;
+    display: block;
+    margin: auto;
     height: calc(225px + 26vw);
     left:calc(20px + 58vw);
     margin-top: calc(20px + 2vw);}
@@ -801,8 +785,8 @@ input {border-radius: 1vw;}
 
 
     #MrBullTele2 {
-      display:inline;
-      height: calc(150px + 26vw);
+      display:block;
+      margin: auto;      height: calc(150px + 26vw);
       margin-top: calc(20px + 2vw);}
 
    
