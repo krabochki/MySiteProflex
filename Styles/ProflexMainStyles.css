@@ -9,7 +9,7 @@
     --main-blue-color: #0957f2; 
     --main-red-color: #f11328;
     --shadows-black: #8f8f8f;
-    --main-white-color: #e9edee;}
+    --main-white-color: #f7f7f7;}
 
 body /*Отступы, шрифт по умолчанию*/ {
   font-family: 'PT Root UI',Arial;
