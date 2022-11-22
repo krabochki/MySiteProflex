@@ -13,31 +13,28 @@
 
 body /*Отступы, шрифт по умолчанию*/ {
     font-family: 'PT Root UI',Arial;
-      margin: 0;
-      padding: 0;overflow: overlay;        
-  background:linear-gradient(90deg, var(--main-background-red-color), var(--main-background-blue-color));
+    margin: 0;
+    padding: 0;overflow: overlay;        
+    background:linear-gradient(90deg, var(--main-background-red-color), var(--main-background-blue-color));
     color:var(--main-text-color)}
 
-    .body2 {      margin: 4px;
+.body2 {      
+  margin: 4px;
       padding: 4px;
       margin-right:  calc(14.5vw - 35px);
       margin-left:  calc(14.5vw - 35px);}
+
 /*Настройки скролл бара*/
 body::-webkit-scrollbar {
   width: 12px;               /* ширина scrollbar */}
 body::-webkit-scrollbar-track {
-  background: transparent;
-  /* цвет дорожки */}
+  background: transparent; /* цвет дорожки */}
 body::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);    /* цвет плашки */
   border-radius: 20px;       /* закругления плашки */
   border: 3px solid var(--main-background-blue-color);  /* padding вокруг плашки */}
 
-
-
-
-
-@font-face /* Шрифт основного текста*/{
+@font-face /* Шрифт основного текста жирный*/{
   font-family: 'PT Root UI';
   src: 
       url(../Fonts/JustTextBold.ttf) format('woff2'),
@@ -61,17 +58,15 @@ body::-webkit-scrollbar-thumb {
       url(../Fonts/HeadingsBold.ttf) format('ttf');
   font-weight: bold;
   font-style: normal;}
-@font-face /* Шрифт основного текста жирный*/{
+@font-face /* Шрифт основного текста*/{
     font-family: 'PT Root UI';
     src: 
-    url(../Fonts/JustTextRegular.ttf) format('ttf'),
-    url(../Fonts/JustTextRegular.woff) format('woff'),
-    url(../Fonts/JustTextRegular.woff2) format('woff2');
+      url(../Fonts/JustTextRegular.ttf) format('ttf'),
+      url(../Fonts/JustTextRegular.woff) format('woff'),
+      url(../Fonts/JustTextRegular.woff2) format('woff2');
     font-weight: 400;
-    font-style: normal;
-}
-  
-@font-face /* Шрифт основного текста*/{
+    font-style: normal;}
+@font-face /* Шрифт основного текста тонкий*/{
   font-family: 'PT Root UI';
   src: 
       url(../Fonts/JustTextLight.ttf) format('woff2'),
@@ -79,17 +74,15 @@ body::-webkit-scrollbar-thumb {
       url(../Fonts/JustTextLight.ttf) format('ttf');
   font-weight: lighter;
   font-style: normal;}  
-  @font-face /* Шрифт основного текста*/{
-    font-family: 'Montserrat Alternates';
-    src: 
-        url(../Fonts/HeadingsLight.ttf) format('woff2'),
-        url(../Fonts/HeadingsLight.woff) format('woff'),
-        url(../Fonts/HeadingsLight.ttf) format('ttf');
-    font-weight: lighter;
-    font-style: normal;}
+@font-face /* Шрифт текста заголовков тонкий*/{
+  font-family: 'Montserrat Alternates';
+  src: 
+      url(../Fonts/HeadingsLight.ttf) format('woff2'),
+      url(../Fonts/HeadingsLight.woff) format('woff'),
+      url(../Fonts/HeadingsLight.ttf) format('ttf');
+  font-weight: lighter;
+  font-style: normal;}
   
-
-
 /*Настройки градиентных кнопок*/
 .btn-hover { /*Общие настройки*/ 
   width:35%;
@@ -115,10 +108,9 @@ body::-webkit-scrollbar-thumb {
 /*Настройка изменения курсора*/
 .menubutt,#logo,.btn-hover {
   cursor: pointer;} 
-  a:-webkit-any-link {
+a:-webkit-any-link {
     color: var(--main-text-color);
-    cursor: pointer;
-}
+    cursor: pointer;}
 /*Настройка ссылок*/
 a{
 text-decoration: none;}
@@ -356,29 +348,24 @@ margin-left:-40px;}
   width: 100%;}
 .bn39:hover .bn39span {
   background: transparent;}
-
-  
-  .custom-btn {
-    width: 130px;
-    height: calc(32px + 3.2vw);
-    color: #fff;
-    border-radius: calc(3px + 0.8vw);
-    padding: 10px 25px;
-    width: 7em;
-
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 700;
-    background: transparent;
-    cursor: pointer;
-    font-size: calc(13px + 1.4vw);
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    outline: none;
-  }
+.custom-btn {
+  height: calc(32px + 3.2vw);
+  color: #fff;
+  border-radius: calc(3px + 0.8vw);
+  padding: 10px 25px;
+  width: 7em;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+  background: transparent;
+  cursor: pointer;
+  font-size: calc(13px + 1.4vw);
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;}
   .btn-9 {
     border: none;
     transition: all 0.3s ease;
@@ -414,182 +401,127 @@ margin-left:-40px;}
   }
 
 
-  .stolbbutt{
-    margin-top: 0.5vw; white-space: pre-wrap;
-  }
-  .stolbmain,.stolbbutt {
-    color: rgb(134, 134, 134);
-    transition: all 0.3s ease-in-out; }
-  .stolbmain:hover,.stolbbutt:hover{
+
+/*Футер*/
+.stolbbutt{
+    margin-top: 0.5vw; 
+    white-space: pre-wrap;}
+.stolbmain:hover,.stolbbutt:hover{
     cursor:pointer;
     text-shadow:  -1px 1px 1.3px var(--shadows-black);}
-  .stolbmain:hover {
-    color:var(--main-red-color)
-  }
-  .stolbbutt:hover {
-    color: var(--main-blue-color);
-  }
-  #footerlinks:visited {
-    color: rgb(134, 134, 134);
-  }
-  #footerlinks {
-    color :rgb(134, 134, 134);
-  }
-.bobo {width:100%;     font-size: calc(0.7vmax + 7px);
-font-weight: lighter;
-height:100px;     margin-top: 10px;
-padding: 30px 30px 20px 30px;
-height:fit-content;
-font-variant-ligatures: none;
-padding-right:  calc(14.5vw - 35px);
-padding-left:  calc(14.5vw - 35px);
-color:rgb(134, 134, 134);
-background-color: rgba(255, 255, 255, 0.2);}
-.stolb {width:fit-content;
+.stolbmain:hover {
+    color:var(--main-red-color)}
+.stolbbutt:hover {
+    color: var(--main-blue-color);}
+#footerlinks,#footerlinks:visited,.stolbmain,.stolbbutt,.bobo,.footbtn  {
+    color :rgb(134, 134, 134);}
+.bobo { 
+  width:100%;     
+  font-size: calc(0.7vmax + 7px);
+  font-weight: lighter;
+  margin-top: 10px;
+  padding: 30px calc(14.5vw - 35px) 20px calc(14.5vw - 35px);
+  height:fit-content;
+  font-variant-ligatures: none;
+  background-color: rgba(255, 255, 255, 0.2);}
+.stolb, .inst,.vk,.telef  {
+  display: inline-block;}
+.stolb {
+  width:fit-content;
   height:90%;
-  display: inline-block;
   margin:0px;
   padding: 0px;}
 .footbtn /*Кнопка почты и сайта*/ {
-align-items: center;
-align-content: center;
   display: block;
   width: calc(70px + 2.8vw);
   text-align: center;
-  color:rgb(134, 134, 134);
-  padding-top: 0.3vw;
-  padding-bottom: 0.3vw;
+  padding: 0.3vw 0 0.3vw 0;
   background-color: rgb(33, 33, 33, 0.05);
   border-radius: 100px;
-  margin-top: 0.5em;
-    transition: all 0.3s ease-in-out; 
-}
+  margin-top: 0.5em;}
 .footbtn:hover {
   background-color: rgb(33, 33, 33, 0.10);
-  color:rgb(85, 85, 85);
-
-
-}
+  color:rgb(85, 85, 85);}
+#stolblog,.footbtn , .stolbmain,.stolbbutt{
+  transition: all 0.3s ease-in-out;}
+#stolblog ,.stolbmain, #stolbcont{
+  margin-bottom: 1vw;  }
 .stolbmain, #stolbcont {
   font-size: calc(0.72vmax + 7.2px);
-  margin-bottom: 1vw;   font-family: 'Montserrat Alternates';
-
-}
+  font-family: 'Montserrat Alternates';}
 #stolblog /*Логотип Профлекс*/{
   font-size: calc(0.9vmax + 14px);
   font-family: 'Montserrat Alternates';
   font-weight: 700;
   font-style: italic;
-  margin-bottom: 1vw;
   font-variant-ligatures: none;
   cursor: pointer; 
-  transition: all 0.3s ease-in-out;
-  color:var(--main-text-color);
-}
-  #stolblog:hover/*Наведение на логотип*/{
-    -webkit-filter: drop-shadow(0px 0px 0px );
-    filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
-
-/*Скрытие элементов, присущих только моб. версии*/
-.menuversionmob{
-  display:none;}
-  #MrBullTele {
-    display: none;}
-    #MrBullTele2 {
-      display: none;}
-.menuversionmob2 {
-  display:none;}
-#warningmob{
-    display:none;}
-
-    *, *:before, *:after {
-      box-sizing: border-box;
-    }
-
-  .inst,.vk,.telef /*Размеры иконок*/ {
+  color:var(--main-text-color);}
+#stolblog:hover/*Наведение на логотип*/{
+  -webkit-filter: drop-shadow(0px 0px 0px );
+  filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
+*, *:before, *:after {
+  box-sizing: border-box;}
+.inst,.vk,.telef /*Размеры иконок*/ {
   height: 50px;
   width: 50px;
-  margin-top: 0.5em;
-  
-  display: inline-block;}
-  .inst /*Иконка инсты*/{
+  margin-top: 0.5em;}
+.inst /*Иконка инсты*/{
     background-image: url("../Pictures/inst.png");}
-  .telef /*Иконка телефона*/{
+.telef /*Иконка телефона*/{
   background-image: url("../Pictures/tele.png");}
-  .vk /*Иконка вк*/{
+.vk /*Иконка вк*/{
   background-image: url("../Pictures/vk.png");}
-
-  #xz1 {    color: #999;
-
-    position:absolute
-  }
-  #xz2{     color: #999;
-    text-align: right;
-  }
-
-  #buttonstolb {  
-    padding-left:2em
-  }
-#stolb3mobo {
-  display: none;
-}
-  #buttonstolb1 {  
+#xz1 {    
+  position:absolute}
+#xz2{     
+  text-align: right;}
+#buttonstolb {    
+  padding-left:2em}
+#buttonstolb1 {  
     padding-left:10em}
+
+
+
+
+/*Скрытие элементов, присущих только моб. версии*/
+#MrBullTele,#MrBullTele2,.menuversionmob2,#warningmob,#stolb3mobo {
+  display:none;}
+
+
 /*МЕДИА ЗАПРОСЫ*/
 
+/*Масштаб бульдогов*/
 @media (max-width:1067px) {
   #MrBull/*Бульдог 1 для комп. версии*/{
-
     margin-top: calc(32px + 0.3vw);}
-    #MrBull2/*Бульдог 2 для комп. версии*/{
-      margin-top:2vw;
-height:85%;
-      left:calc(70% + 45px);
-    
-    }
+  #MrBull2/*Бульдог 2 для комп. версии*/{
+    margin-top:2vw;
+    height:85%;
+    left:calc(70% + 45px);}
   
 #h2textmarg /*Отступ перед 2 бульдогом*/{
-margin-right: calc(45% - 120px) }
-  }
+margin-right: calc(45% - 120px) }}
 /*Настройки для ширины когда нужно 2 строки "Почему это важно"*/
 @media (max-width: 900px) {
-  
-  .test > div 
-  {
+  .test > div {
     width:47%;
-    margin-bottom:2%;
-
-  }
+    margin-bottom:2%;}
   .textplus{
-
-    padding-left: calc(45px + 2.7vw);
-
-  }
-  .textpluses
-  {
-    padding-left:calc(30px+4vw) ;
-    padding-right:calc(3px + 2vw);
-    font-size: calc(10px + 0.5vw) ;
-  }
-.btn-hover.color-1
-{border-radius: 1vw;}
-
-#MrBull2/*Бульдог 2 для комп. версии*/{
-  margin-top:calc(3.2vw + 35px);
-height:calc(85% - 50px);
-  left:calc(70% + 5px);
-
-}
-
-#h2textmarg /*Отступ перед 2 бульдогом*/{
-  margin-right: calc(50% - 80px); }
-    
-
-.btn-hover.color-2{border-radius: 0.7vw;}
-input {border-radius: 1vw;}
-#cont {border-radius:1vw;}
-  .num
-  {
+    padding-left: calc(45px + 2.7vw);}
+  .textpluses{
+    padding: 0 calc(3px + 2vw) 0 calc(30px+4vw);
+    font-size: calc(10px + 0.5vw) ;}
+  .btn-hover.color-1,input,#cont{
+    border-radius: 1vw;}
+  #MrBull2/*Бульдог 2 для комп. версии*/{
+    margin-top:calc(3.2vw + 35px);
+    height:calc(85% - 50px);
+    left:calc(70% + 5px);}
+  #h2textmarg /*Отступ перед 2 бульдогом*/{
+    margin-right: calc(50% - 80px); }
+  .btn-hover.color-2{border-radius: 0.7vw;}
+  .num{
     width: calc(25px + 2.1vw);
     height: 70%;
     font-size: calc(5px + 4vw);
@@ -597,118 +529,63 @@ input {border-radius: 1vw;}
     min-width: 53px;
     display: flex;
     justify-content: center;
-    align-content: center;
-    flex-direction: column;
-  }}
+    flex-direction: column;}}
+/*Масштабы для футера*/
 @media (max-width:800px) {
-
-
-  #buttonstolb {padding-left:1em;
-  }
-
-  #buttonstolb1 {  padding-left:5em;
-  }
-  
-
-}
-
+  #buttonstolb {
+    padding-left:1em;}
+  #buttonstolb1 {  
+    padding-left:5em;}}
 /*Настройки для ширины когда нужна 1 строка "Почему это важно"*/
 @media (max-width: 600px) {
-  .test > div 
-  {
+  .test > div {
     width:100%;
-    margin:5px;
-  }
-
-  .num
-  { 
+    margin:5px; }
+  .num{ 
     height: 79%;
     min-width: 0px;
     width: calc(40px + 2.1vw);
-
-        font-size: calc(5px + 5.5vw);
-  }}
-
+    font-size: calc(5px + 5.5vw);}}
+/*Настройки предупреждений...*/
 @media ((max-width:702px) and (min-width:601px)) {
     #warningcomp{
       display:none;}
-      #warningmob{display:block;
+    #warningmob{
+      display:block;
       } }
 @media (max-width:400px) {
-    #warningcomp{
-      display:none;}
-      #warningmob{display:block;
-      } }
+  #warningmob{display:block;} }
 
 /*Настройки для маленьких экранов, где нужно переносить картинки и новое меню*/
 @media (max-width: 600px) {
+  #stolbcont, .stolbmain, .bobo  {
+    font-size: calc(2.5vw + 5px);}
+  #buttonstolb,#buttonstolb1,#warningcomp {
+    display: none;}
+  .stolbmob, .footbtn {
+    display: inline-block;}
+  .stolbmob {
+    margin: 2vw 0 2vw 0;
+    padding: 0 0.5em 0 0.5em;}
+  #kkkk, #mobiicon, #aaa{
+    text-align: center;}
+  .footbtn {
+    padding: 5px 3px 5px 3px;
+    margin-top:10px;
+    width: calc(80px + 2.8vw);}
+  #aaa,.stolb {
+    width: 100%;}
+  #mobiicon,#stolblog  {
+    margin-bottom: 4vw;}
+  #stolb3mobo {
+    display: inline;}
+  #stolblog {
+    font-size: calc(5vw + 8px);}
+  #xz1 {
+    position:static;}
+  #xz2{
+    text-align: left;}
 
-
-#stolbcont, .stolbmain {
-  font-size: calc(2.5vw + 5px);}
-
-.bobo {
-font-size: calc(2.5vw + 5px);}
-
-#buttonstolb {display: none;}
-
-  #buttonstolb1 { display: none;
-  }
-
-.stolbmob {
-display: inline-block;
-margin-top: 2vw;
-margin-bottom: 2vw;
-padding-left:0.5em;
-padding-right: 0.5em;
-}
-#kkkk
-{
- 
-  text-align: center;
-}
-.footbtn {
- 
-  display: inline-block;
-padding:3px;
-padding-top:5px;
-padding-bottom: 5px;
-margin-top:10px;
-width: calc(80px + 2.8vw);
-
-}
-#aaa {
-
-text-align: center;
-width: 100%;
-}
-
-.stolb {
-  width:100%;margin-left: auto;
-  margin-right: auto;
-
-}
-#mobiicon {
-text-align: center;
-margin-bottom: 4vw;
-}
-
-#stolb3mobo {
-
-  display: inline;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-#stolblog {
-font-size: calc(5vw + 8px);
-margin-bottom: 5vw;
-  text-align: center;
-}
-#xz1 {
-  position:static;
-}
-#xz2{text-align: left;}
 
   #MrBull  {
     display: none;}
