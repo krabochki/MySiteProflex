@@ -13,7 +13,7 @@
 
 body /*Отступы, шрифт по умолчанию*/ {
   font-family: 'PT Root UI',Arial;
-  margin: 0 ;  
+  margin: 0 ;  overflow: overlay;
   background:linear-gradient(90deg, var(--main-background-red-color), var(--main-background-blue-color));
   color:var(--main-text-color)}
 
@@ -22,14 +22,14 @@ body /*Отступы, шрифт по умолчанию*/ {
   margin: 4px calc(14.5vw - 35px) 4px calc(14.5vw - 35px)}
 
 /*Настройки скролл бара*/
-body::-webkit-scrollbar {
-  width: 12px;               /* ширина scrollbar */}
+body::-webkit-scrollbar { 
+  width: 17px;               /* ширина scrollbar */}
 body::-webkit-scrollbar-track {
   background: transparent; /* цвет дорожки */}
 body::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);    /* цвет плашки */
   border-radius: 20px;       /* закругления плашки */
-  border: 3px solid var(--main-background-blue-color);  /* padding вокруг плашки */}
+  border: 4px solid var(--main-background-blue-color);  /* padding вокруг плашки */}
 
 @font-face /* Шрифт основного текста жирный*/{
   font-family: 'PT Root UI';
