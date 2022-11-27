@@ -11,13 +11,22 @@
     --shadows-black: #8f8f8f;
     --main-white-color: #f7f7f7;}
 
+
+    ::selection {
+      background: rgba(255, 255, 255, 0.1); /* Safari */
+      color: #fff;
+      }
+      ::-moz-selection {
+        background: var(--main-blue-color); /* Safari */
+        color: #fff;      }
+
 body /*Отступы, шрифт по умолчанию*/ {
   font-family: 'PT Root UI',Arial;
   margin: 0 ;  overflow: overlay;
   background:linear-gradient(90deg, var(--main-background-red-color), var(--main-background-blue-color));
   color:var(--main-text-color)}
 
-.body2,.container,.sidebar {      
+#GlobalMargins,.OpenPagesCont,.InThisArticle {      
   padding: 4px;
   margin: 4px calc(14.5vw - 35px) 4px calc(14.5vw - 35px)}
 
@@ -39,7 +48,7 @@ body::-webkit-scrollbar-thumb {
       url(../Fonts/JustTextBold.ttf) format('ttf');
   font-weight: bold;
   font-style: normal;}
-  @font-face /* Шрифт основного текста*/{
+@font-face /* Шрифт основного текста*/{
     font-family: 'Montserrat Alternates Regular';
     src: 
       url(../Fonts/HeadingsRegular.ttf) format('ttf'),
@@ -81,7 +90,7 @@ body::-webkit-scrollbar-thumb {
   font-style: normal;}
   
 /*Настройки градиентных кнопок*/
-.btn-hover { /*Общие настройки*/ 
+.GradientButton { /*Общие настройки*/ 
   width:35%;
   color: var(--main-white-color);
   text-align:center;
@@ -93,45 +102,42 @@ body::-webkit-scrollbar-thumb {
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   font-family: 'PT Root UI'; }
-.btn-hover:hover { /*При наведении*/
+.GradientButton:hover { /*При наведении*/
   background-position: 100% 0;
   -moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;}
-.btn-hover:focus { /*При фокусе*/
+.GradientButton:focus { /*При фокусе*/
   outline: none;}
 
 /*Настройка изменения курсора*/
-.menubutt,#logo,.btn-hover,a:-webkit-any-link,.stolbmain:hover,.stolbbutt:hover,#stolblog,summary  {
+.MenuButton,#MenuLogo,.GradientButton,a:-webkit-any-link,.ColumnName:hover,.ColumnBtn:hover,#FootLogo,summary  {
   cursor: pointer;} 
 
 /*Настройка ссылок*/
 a{padding:0; margin:0; height:auto; width: auto; ;
 text-decoration: none;}
-a:active,a:visited,a:-webkit-any-link,.menubutt, #logo,#stolblog  {
+a:active,a:visited,a:-webkit-any-link,.MenuButton, #MenuLogo,#FootLogo  {
   color:var(--main-text-color);}
 input{
-  color:var(--main-blue-color)
-}
+  color:var(--main-blue-color)}
+
 /*Главное меню для комп. версии*/
-.menuversioncomp,.test,.textpluses,.bn39 .bn39span {
+.Menu,#AllPlusesCont,.PlusCont,.bn39 .bn39span {
   display: flex;}
-.menubutt, #logo,hr {
+.MenuButton, #MenuLogo,hr {
   border: none;}
-.menubutt, #logo,.btn-hover.color-2{
+.MenuButton, #MenuLogo,.GradientButton.LogInColor{
   margin-top:0.8vw;
-  font-size:calc(11px + 0.8vw);
-    }
-.menubutt, #logo{
-  background-color: unset;
-}
-.menubutt{
-  padding-left: calc(5px + 3vw);
-}
-#logo,h2,.bobo,#stolblog,#logomob{
+  font-size:calc(11px + 0.8vw);}
+.MenuButton, #MenuLogo{
+  background-color: unset;}
+.MenuButton{
+  padding-left: calc(5px + 3vw);}
+#MenuLogo,h2,.BigFoot,#FootLogo,#logomob{
   font-variant-ligatures: none;}
-.btn-hover.color-2 {
+.GradientButton.LogInColor {
   background-image: linear-gradient(to right, #a81524, var(--main-red-color), #cf1f31, #77101a);
   box-shadow: 0px 2px 8px 0px  #ffa0aa;
   width:12%; 
@@ -139,21 +145,19 @@ input{
   border-radius: 0.6vw;
   font-weight: 700;
   height:calc(12px + 1.5vw);}
-
-#btnsmenu {display:contents}
-
-#logo:hover{
+#MenuLogo:hover{
   -webkit-filter: drop-shadow(0px 0px 0px );
   filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
-.menubutt:hover{
+.MenuButton:hover{
   text-shadow:  -1.5px 1.5px 1.3px var(--shadows-black);}
 hr /*Полоса под меню*/{
   margin: 1.2vw 0;
   background:var(--main-background-blue-color);
   height: 1px;}
-   .logo1 {
+   .LogoPRO {
     font-family:'Montserrat Alternates Regular'; 
     font-weight:400;
+    font-style: normal;
     color:var(--main-blue-color);
    }
 
@@ -163,31 +167,33 @@ hr /*Полоса под меню*/{
   position:absolute;
   height: calc(210px + 19vw);
   left:calc(20px + 58vw);
-  margin-top: calc(20px + 0.3vw);}
+  margin-top: calc(-320px + (-500 - -320) * ((100vw - 600px) / (1920 - 600)));
 
-input,input::-webkit-input-placeholder,#warningcomp,#warningmob,.menubutt
+}
+
+input,input::-webkit-input-placeholder,#WarningLong,#WarningShort,.MenuButton
 {
   font-family: 'PT Root UI';
 }
-h1,#logo,h2,.num ,#stolblog {
+h1,#MenuLogo,h2,.PlusNum ,#FootLogo {
   font-family: 'Montserrat Alternates';
   font-weight: 700;}
 #h1text  /*Текст под главным заголовком*/{
   font-size:calc(11px + 0.9vw);
   margin: 2.5% 0 3% 0;}
-
-h2,h1,#h1text,#cont,.h2text,.list1 {
+#MenuButtons {display: contents;}
+h2,h1,#h1text,#SignUpCont,.h2text,.YouCanUseList {
   line-height: 1.3;}
 
-h1,#h1text,#cont {
+h1,#h1text,#SignUpCont {
   margin-right: 46%;}
 h1 /*Главный заголовок*/{
   font-size:calc(13px + 1.4vw);}
 
 /*Форма регистрации*/
-#cont,input,.num {
+#SignUpCont,input,.PlusNum {
   border-radius: 1vw;}
-#cont {
+#SignUpCont {
 background-color: var(--background-lighter-color);}
 input{
   margin: 3% 0 0 4%;
@@ -202,21 +208,21 @@ input:focus{
   outline: none; /*for chrome*/
   border-color:var(--main-blue-color);
   box-shadow:0 0 0.5rem #508aff;}
-#warningcomp,#warningmob{
+#WarningLong,#WarningShort{
   margin: 0 4% 0 4%;
   padding: 1% 0 0.7vw 0;
   color:#ff8993;
   font-size:calc(8px + 0.5vw);}
-#warningcomp,#warningmob,.num,.footbtn{
+#WarningLong,#WarningShort,.PlusNum,.footerRealBtn{
   text-align:center;
 
   }
-input, .btn-hover.color-1
+input, .GradientButton.SignUpColor
 {
   height: 3.9vw; 
   font-size:calc(10px + 0.9vw);
 }
-.btn-hover.color-1 { /*Кнопка регистрации*/
+.GradientButton.SignUpColor { /*Кнопка регистрации*/
   background-image: linear-gradient(to right, #143371, var(--main-blue-color), #1746e2, #143371);
   box-shadow:  0px 2px 8px 0px  rgba(10, 22, 1000, 0.45);
   margin: 3% 0 0 3%;
@@ -230,15 +236,15 @@ h2{
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: var(--main-blue-color);}
-.h2text,.list1 /*Текст под главным заголовком*/{
+.h2text,.YouCanUseList /*Текст под главным заголовком*/{
   margin: 2% 0 3% 0;
   font-size:calc(10px + 0.7vw);}
 
 /*Блоки для плюсов сайта*/
-.test { /*Обобщение блоков*/
+#AllPlusesCont { /*Обобщение блоков*/
   flex-flow: row wrap;
   justify-content: space-between;}
-.num /*Блоки с цифрами*/{
+.PlusNum /*Блоки с цифрами*/{
   background-color: var(--main-background-blue-color);
   margin-top:calc(25px + 0.2vw);
   height: calc(25px + 2.1vw);
@@ -246,7 +252,7 @@ h2{
   font-size: calc(15px + 1.3vw);
   line-height: calc((25px + 2.1vw));
   color:var(--main-blue-color);}
-.textpluses /*Сам блок*/{
+.PlusCont /*Сам блок*/{
   font-size: calc(8px + 0.5vw) ;
   width:31%;
   padding:calc(5px + 0.8vw);
@@ -255,29 +261,29 @@ h2{
   overflow: hidden;
   border-radius: 1.5vw;
   background-color: var(--background-lighter-color);}
-.num,.textplus{
+.PlusNum,.PlusText{
   top: 0;
   bottom: 0;
   margin: auto 0;
 }
-.textplus{ /*Текст внутри блока*/
+.PlusText{ /*Текст внутри блока*/
   padding-left: calc(30px + 2.9vw);
   opacity:1;
  }
 
 /*Настройки списков*/
-.list1 {
+.YouCanUseList {
 margin-left:-40px;}
-.list1 li {
+.YouCanUseList li {
   background: url("../Pictures/Yes.png") no-repeat 7px 7px transparent; /* <-- change `left` & `top` too for extra control */
   background-position:left;
   list-style: none;
   padding-left:  calc(33px + (40 - 33) * (100vw - 600px) / (1200 - 600));}
-.list1 p {
+.YouCanUseList p {
   font-size:  calc(7px + (9 - 7) * (100vw - 600px) / (1200 - 600));}
 #h2textmarg /*Отступ перед 2 бульдогом*/{
   margin-right: calc(45% - 120px) }
-#MrBull2, .num,#xz1, .btn-9:after{
+#MrBull2, .PlusNum,#xz1, .btn-9:after{
   position:absolute;
 
 }
@@ -285,7 +291,7 @@ margin-left:-40px;}
   height: 100%;
   left:calc(70% + 40px);
 }
-#bull,.textpluses,.bn39,.custom-btn  {
+#bull,.PlusCont,.bn39,.custom-btn  {
   position:relative;
 }
 
@@ -366,18 +372,18 @@ margin-left:-40px;}
 
 
 /*Футер*/
-.stolbbutt{
+.ColumnBtn{
     margin-top: 0.5vw; 
     white-space: pre-wrap;}
-.stolbmain:hover,.stolbbutt:hover{
+.ColumnName:hover,.ColumnBtn:hover{
     text-shadow:  -1px 1px 1.3px var(--shadows-black);}
-.stolbmain:hover {
+.ColumnName:hover {
     color:var(--main-red-color)}
-.stolbbutt:hover {
+.ColumnBtn:hover {
     color: var(--main-blue-color);}
-#footerlinks,#footerlinks:visited,.stolbmain,.stolbbutt,.bobo,.footbtn  {
+#footerlinks,#footerlinks:visited,.ColumnName,.ColumnBtn,.BigFoot,.footerRealBtn  {
     color :rgb(134, 134, 134);}
-.bobo { 
+.BigFoot { 
   width:100%;     
   font-size: calc(0.7vmax + 7px);
   font-weight: lighter;
@@ -385,36 +391,36 @@ margin-left:-40px;}
   padding: 30px calc(14.5vw - 35px) 30px calc(14.5vw - 35px);
   height:fit-content;
   background-color: rgba(255, 255, 255, 0.2);}
-.stolb, .inst,.vk,.telef,.custom-btn,#MrBull2,#MrBull,summary  {
+.FooterColumn, .inst,.vk,.telef,.custom-btn,#MrBull2,#MrBull,summary  {
   display: inline-block;}
-.stolb {
+.FooterColumn {
   width:fit-content;
   height:90%;
   margin:0px;
   padding: 0px;}
-.footbtn /*Кнопка почты и сайта*/ {
+.footerRealBtn /*Кнопка почты и сайта*/ {
   width: calc(70px + 2.8vw);
   padding: 0.3vw 0 0.3vw 0;
   background-color: rgb(33, 33, 33, 0.05);
   border-radius: 100px;
   margin-top: 0.5em;}
-.footbtn:hover {
+.footerRealBtn:hover {
   background-color: rgb(33, 33, 33, 0.10);
   color:rgb(85, 85, 85);}
-#stolblog,.footbtn , .stolbmain,.stolbbutt,.custom-btn,.menubutt, #logo,input,summary,details p{
+#FootLogo,.footerRealBtn , .ColumnName,.ColumnBtn,.custom-btn,.MenuButton, #MenuLogo,input,summary,details p{
   transition: all 0.3s ease-in-out;}
-#stolblog ,.stolbmain, #stolbcont{
+#FootLogo ,.ColumnName, #ContactsHeading{
   margin-bottom: 1vw;  }
-.stolbmain, #stolbcont {
+.ColumnName, #ContactsHeading {
   font-size: calc(0.72vmax + 7.2px);}
-.stolbmain, #stolbcont
+.ColumnName, #ContactsHeading
 {
   font-family: 'Montserrat Alternates';}
-#stolblog /*Логотип Профлекс*/{
+#FootLogo /*Логотип Профлекс*/{
   
   font-size: calc(0.9vmax + 14px);
   font-style: italic;}
-#stolblog:hover/*Наведение на логотип*/{
+#FootLogo:hover/*Наведение на логотип*/{
   -webkit-filter: drop-shadow(0px 0px 0px );
   filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
 *, *:before, *:after {
@@ -432,28 +438,28 @@ margin-left:-40px;}
 
 #xz2{     
   text-align: right;}
-#buttonstolb {    
-  padding-left:2em}
-#buttonstolb1 {  
-    padding-left:10em}
+#ColumnButtons {    
+  padding-left:calc(2vw + 25px)}
+#Stolb1 {  
+    padding-left:14vw}
 
-    .footbtn,.bn39 /*Кнопка почты и сайта*/ {
+    .footerRealBtn,.bn39 /*Кнопка почты и сайта*/ {
       display: block;}
-
-
-
-
+      #ThemeColumns {
+        display:flex;
+      }
+      
 /*Скрытие элементов, присущих только моб. версии*/
-#MrBullTele,#MrBullTele2,.menuversionmob2,#warningmob,#stolb3mobo,summary::-webkit-details-marker,summary::marker {
+#MrBullTele2,#WarningShort,summary::-webkit-details-marker,summary::marker {
   display:none;}
-
+#contactsNthemesColumn {
+  display: flex;
+}
 
 /*МЕДИА ЗАПРОСЫ*/
-
 /*Масштаб бульдогов*/
 @media (max-width:1067px) {
-  #MrBull/*Бульдог 1 для комп. версии*/{
-    margin-top: calc(32px + 0.3vw);}
+
   #MrBull2/*Бульдог 2 для комп. версии*/{
     margin-top:2vw;
     height:85%;
@@ -463,15 +469,15 @@ margin-left:-40px;}
 margin-right: calc(45% - 120px) }}
 /*Настройки для ширины когда нужно 2 строки "Почему это важно"*/
 @media (max-width: 900px) {
-  .test > div {
+  #AllPlusesCont > div {
     width:47%;
     margin-bottom:2%;}
-  .textplus{
+  .PlusText{
     padding-left: calc(45px + 2.7vw);}
-  .textpluses{
+  .PlusCont{
     padding: 0 calc(3px + 2vw) 0 calc(30px+4vw);
     font-size: calc(10px + 0.5vw) ;}
-  .btn-hover.color-1,input,#cont{
+  .GradientButton.SignUpColor,input,#SignUpCont{
     border-radius: 1vw;}
   #MrBull2/*Бульдог 2 для комп. версии*/{
     margin-top:calc(3.2vw + 35px);
@@ -479,8 +485,8 @@ margin-right: calc(45% - 120px) }}
     left:calc(70% + 5px);}
   #h2textmarg /*Отступ перед 2 бульдогом*/{
     margin-right: calc(50% - 80px); }
-  .btn-hover.color-2{border-radius: 0.7vw;}
-  .num{
+  .GradientButton.LogInColor{border-radius: 0.7vw;}
+  .PlusNum{
     width: calc(25px + 2.1vw);
     height: 70%;
     font-size: calc(5px + 4vw);
@@ -491,191 +497,146 @@ margin-right: calc(45% - 120px) }}
     flex-direction: column;}}
 /*Масштабы для футера*/
 @media (max-width:800px) {
-  #buttonstolb {
+  #ColumnButtons {
     padding-left:1em;}
   #buttonstolb1 {  
     padding-left:5em;}}
 /*Настройки для ширины когда нужна 1 строка "Почему это важно"*/
 @media (max-width: 600px) {
-  .test > div {
+  #AllPlusesCont > div {
     width:100%;
     margin:5px; }
-  .num{ 
+  .PlusNum{ 
     height: 79%;
     min-width: 0px;
     width: calc(40px + 2.1vw);
     font-size: calc(5px + 5.5vw);}}
 /*Настройки предупреждений...*/
 @media ((max-width:702px) and (min-width:601px)) {
-    #warningcomp{
+    #WarningLong{
       display:none;}
-    #warningmob{
+    #Warningshort{
       display:block;
       } }
-
-
 /*Настройки для маленьких экранов, где нужно переносить картинки и новое меню*/
 @media (max-width: 600px) {
-  #stolbcont, .stolbmain, .bobo  {
+  #ContactsHeading, .ColumnName, .BigFoot  {
     font-size: calc(2.5vw + 5px);}
-  #buttonstolb,#buttonstolb1,#warningcomp {
+  #WarningLong {
     display: none;}
-  .stolbmob, .footbtn {
+  .footerRealBtn {
     display: inline-block;}
-  .stolbmob {
-    margin: 2vw 0 2vw 0;
-    padding: 0 0.5em 0 0.5em;}
-  #kkkk, #mobiicon, #aaa, #stolblog{
+  #emailNwebsite, #IconsMob, #Contacts, #FootLogo{
     text-align: center;}
-  .footbtn {
+  .footerRealBtn {
     padding: 5px 3px 5px 3px;
     margin-top:10px;
     width: calc(80px + 2.8vw);}
-  #aaa,.stolb {
-    width: 100%;}
-  #mobiicon,#stolblog  {
+  #IconsMob,#FootLogo  {
     margin-bottom: 4vw;}
-  #stolb3mobo {
-    display: inline;}
-  #stolblog {
+  #FootLogo {
     font-size: calc(5vw + 8px);}
   #xz1 {
     position:static;}
   #xz2{
     text-align: left;}
-
-
   #MrBull  {
+    display: block;
+    margin: auto;
+    position: static;
+    height: calc(225px + 26vw);
+    left:calc(20px + 58vw);
+    margin-top: calc(20px + 2vw);}
+  #MrBull2 {
     display: none;}
-
-    #MrBull2 {
-      display: none;
-    }
-
   h1{
     font-size:calc(9.8px + 2.2vw);
     margin-right: 0%;
     line-height: 1.3;
     text-align: center; }
-
   #h1text{
     font-size:calc(10px + 1.7vw);
     margin-right: 0%;
     line-height: 1.3;
     margin-bottom: 3vw;
     text-align: center}
-  
-  #cont {
+  #SignUpCont {
     overflow: hidden;
     border-radius: 1.9vw;
     margin-right: 0%;}
-  
   input{
     width:50%;
     border-radius:1.3vw;
     font-size:calc(11.5px + 1.4vw);
     height: calc(18px + 3vw);}
-  
-    #warningcomp{
-      display: block;
-      font-size:calc(9px + 1vw);}
-  #warningmob{
+  #WarningLong{
+    display: block;
     font-size:calc(9px + 1vw);}
-  
-  .btn-hover.color-1  {
-
+  #WarningShort{
+    font-size:calc(9px + 1vw);}
+  .GradientButton.SignUpColor  {
     height: calc(20px + 3vw);
     border-radius: 1.3vw;
     font-size:calc(11.5px + 1.4vw); }
-
   html{
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none}
-
-    h2 {
-      font-size:calc(9.4px + 2vw);
-    }
-    .h2text, .list1 {
-      font-size:calc(3px + 1.2vmax);
-      font-size:calc(9.2px + 1.5vw);
-    }
-  
-    #h2textmarg {
-      margin:0px;
-    }
-  
+  h2 {
+    font-size:calc(9.4px + 2vw);}
+  .h2text, .YouCanUseList {
+    font-size:calc(3px + 1.2vmax);
+    font-size:calc(9.2px + 1.5vw);}
+  #h2textmarg {
+    margin:0px;}
   body::-webkit-scrollbar {
     width: 0;
     height: 0;}
-
-  #MrBullTele {
-    display: block;
-    margin: auto;
-    height: calc(225px + 26vw);
-    left:calc(20px + 58vw);
-    margin-top: calc(20px + 2vw);}
-    
-
-
-    #MrBullTele2 {
-      display:block;
-      margin: auto;      height: calc(150px + 26vw);
-      margin-top: calc(20px + 2vw);}
-
-#logo {
-  display:flexbox;
-}
-    .menuversioncomp {display: grid;
+  #ThemeColumns{
+    text-align: center;
     margin-left: auto;
-  margin-right: auto;
-text-align: center;}
-#logo {
-  font-family: 'Montserrat Alternates';  font-size:calc(24px + 0.8vw);
-  margin-top:2vw;
-  margin-bottom: 1vw;
-
-}
-.menubutt{font-size:calc(14px + 0.8vw);
-  padding:0 6px 0 6px;
-
-
-}
-
-
-#btnsmenu {
-  display: inline;
-}
-.btn-hover.color-2 { display: none;}
-
-
-hr {
-  margin: 10px;
-}
-
-
-
-
-.textplus {
-  font-size:calc(8.2px + 1.3vw);
-
-}
-
-#menubutts
-{   
-  text-align: center; 
-}
-hr{
-  background:repeating-linear-gradient(-90deg, var(--main-background-red-color), var(--main-background-blue-color));
-
-}
-}
-
-
-
+    margin-right:auto;
+    width:fit-content}
+  .FooterColumn {
+    display: inline-block;
+    margin: 2vw 0 2vw 0;
+    padding-left: 0;}
+  #MrBullTele2 {
+    display:block;
+    margin: auto;      
+    height: calc(150px + 26vw);
+    margin-top: calc(20px + 2vw);}
+  #MenuLogo {
+    display:flexbox;}
+  .Menu {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+  text-align: center;}
+  #MenuLogo {
+    font-family: 'Montserrat Alternates';  font-size:calc(24px + 0.8vw);
+    margin-top:2vw;
+    margin-bottom: 1vw;}
+  .MenuButton{
+    font-size:calc(14px + 0.8vw);
+    padding:0 6px 0 6px;}
+  #MenuButtons {
+    display: inline;}
+  .GradientButton.LogInColor { 
+    display: none;}
+  .PlusText {
+    font-size:calc(8.2px + 1.3vw);}
+  #FirstColumn {
+  margin: auto;
+  display: block;}
+  #contactsNthemesColumn{
+    display: inline;}
+  hr{
+    background:repeating-linear-gradient(-90deg, var(--main-background-red-color), var(--main-background-blue-color));
+    margin: 10px;}}
 @media (max-width:400px) {
-  #warningcomp{
+  #WarningLong{
     display:none;}
-  #warningmob{
-    display:block;}
-}
+  #WarningShort{
+    display:block;}}
+
