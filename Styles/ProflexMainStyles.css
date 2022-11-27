@@ -17,19 +17,19 @@ body /*Отступы, шрифт по умолчанию*/ {
   background:linear-gradient(90deg, var(--main-background-red-color), var(--main-background-blue-color));
   color:var(--main-text-color)}
 
-.body2 {      
+.body2,.container,.sidebar {      
   padding: 4px;
   margin: 4px calc(14.5vw - 35px) 4px calc(14.5vw - 35px)}
 
 /*Настройки скролл бара*/
 body::-webkit-scrollbar { 
-  width: 17px;               /* ширина scrollbar */}
+  width: calc(5.8px + 0.5vw);               /* ширина scrollbar */}
 body::-webkit-scrollbar-track {
   background: transparent; /* цвет дорожки */}
 body::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);    /* цвет плашки */
   border-radius: 20px;       /* закругления плашки */
-  border: 4px solid var(--main-background-blue-color);  /* padding вокруг плашки */}
+  border: calc(0.9px + 0.15vw) solid #bad1fd;  /* padding вокруг плашки */}
 
 @font-face /* Шрифт основного текста жирный*/{
   font-family: 'PT Root UI';
@@ -39,14 +39,14 @@ body::-webkit-scrollbar-thumb {
       url(../Fonts/JustTextBold.ttf) format('ttf');
   font-weight: bold;
   font-style: normal;}
-@font-face /* Шрифт текста заголовков*/{
-  font-family: 'Montserrat Alternates';
-  src: 
-      url(../Fonts/HeadingsRegular.ttf) format('woff2'),
+  @font-face /* Шрифт основного текста*/{
+    font-family: 'Montserrat Alternates Regular';
+    src: 
+      url(../Fonts/HeadingsRegular.ttf) format('ttf'),
       url(../Fonts/HeadingsRegular.woff) format('woff'),
-      url(../Fonts/HeadingsRegular.ttf) format('ttf');
-  font-weight: 400;
-  font-style: normal;}
+      url(../Fonts/HeadingsRegular.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;}
 @font-face /* Шрифт текста заголовков жирный*/{
   font-family: 'Montserrat Alternates';
   src: 
@@ -69,7 +69,7 @@ body::-webkit-scrollbar-thumb {
       url(../Fonts/JustTextLight.ttf) format('woff2'),
       url(../Fonts/JustTextLight.woff) format('woff'),
       url(../Fonts/JustTextLight.ttf) format('ttf');
-  font-weight: lighter;
+  font-weight: 300;
   font-style: normal;}  
 @font-face /* Шрифт текста заголовков тонкий*/{
   font-family: 'Montserrat Alternates';
@@ -103,15 +103,17 @@ body::-webkit-scrollbar-thumb {
   outline: none;}
 
 /*Настройка изменения курсора*/
-.menubutt,#logo,.btn-hover,a:-webkit-any-link,.stolbmain:hover,.stolbbutt:hover,#stolblog  {
+.menubutt,#logo,.btn-hover,a:-webkit-any-link,.stolbmain:hover,.stolbbutt:hover,#stolblog,summary  {
   cursor: pointer;} 
 
 /*Настройка ссылок*/
-a{
+a{padding:0; margin:0; height:auto; width: auto; ;
 text-decoration: none;}
-a:active,a:visited,a:-webkit-any-link,.menubutt, #logo,input,#stolblog  {
+a:active,a:visited,a:-webkit-any-link,.menubutt, #logo,#stolblog  {
   color:var(--main-text-color);}
-
+input{
+  color:var(--main-blue-color)
+}
 /*Главное меню для комп. версии*/
 .menuversioncomp,.test,.textpluses,.bn39 .bn39span {
   display: flex;}
@@ -137,6 +139,9 @@ a:active,a:visited,a:-webkit-any-link,.menubutt, #logo,input,#stolblog  {
   border-radius: 0.6vw;
   font-weight: 700;
   height:calc(12px + 1.5vw);}
+
+#btnsmenu {display:contents}
+
 #logo:hover{
   -webkit-filter: drop-shadow(0px 0px 0px );
   filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
@@ -146,7 +151,14 @@ hr /*Полоса под меню*/{
   margin: 1.2vw 0;
   background:var(--main-background-blue-color);
   height: 1px;}
-   
+   .logo1 {
+    font-family:'Montserrat Alternates Regular'; 
+    font-weight:400;
+    color:var(--main-blue-color);
+   }
+
+
+
 #MrBull/*Бульдог 1 для комп. версии*/{
   position:absolute;
   height: calc(210px + 19vw);
@@ -369,11 +381,11 @@ margin-left:-40px;}
   width:100%;     
   font-size: calc(0.7vmax + 7px);
   font-weight: lighter;
-  margin-top: 10px;
-  padding: 30px calc(14.5vw - 35px) 20px calc(14.5vw - 35px);
+  margin-top: calc(18px + 2.3vw);
+  padding: 30px calc(14.5vw - 35px) 30px calc(14.5vw - 35px);
   height:fit-content;
   background-color: rgba(255, 255, 255, 0.2);}
-.stolb, .inst,.vk,.telef,.custom-btn,#MrBull2,#MrBull  {
+.stolb, .inst,.vk,.telef,.custom-btn,#MrBull2,#MrBull,summary  {
   display: inline-block;}
 .stolb {
   width:fit-content;
@@ -389,7 +401,7 @@ margin-left:-40px;}
 .footbtn:hover {
   background-color: rgb(33, 33, 33, 0.10);
   color:rgb(85, 85, 85);}
-#stolblog,.footbtn , .stolbmain,.stolbbutt,.custom-btn,.menubutt, #logo{
+#stolblog,.footbtn , .stolbmain,.stolbbutt,.custom-btn,.menubutt, #logo,input,summary,details p{
   transition: all 0.3s ease-in-out;}
 #stolblog ,.stolbmain, #stolbcont{
   margin-bottom: 1vw;  }
@@ -399,6 +411,7 @@ margin-left:-40px;}
 {
   font-family: 'Montserrat Alternates';}
 #stolblog /*Логотип Профлекс*/{
+  
   font-size: calc(0.9vmax + 14px);
   font-style: italic;}
 #stolblog:hover/*Наведение на логотип*/{
@@ -431,7 +444,7 @@ margin-left:-40px;}
 
 
 /*Скрытие элементов, присущих только моб. версии*/
-#MrBullTele,#MrBullTele2,.menuversionmob2,#warningmob,#stolb3mobo {
+#MrBullTele,#MrBullTele2,.menuversionmob2,#warningmob,#stolb3mobo,summary::-webkit-details-marker,summary::marker {
   display:none;}
 
 
@@ -610,137 +623,44 @@ margin-right: calc(45% - 120px) }}
       margin: auto;      height: calc(150px + 26vw);
       margin-top: calc(20px + 2vw);}
 
-   
-  .menuversioncomp{
+#logo {
+  display:flexbox;
+}
+    .menuversioncomp {display: grid;
+    margin-left: auto;
+  margin-right: auto;
+text-align: center;}
+#logo {
+  font-family: 'Montserrat Alternates';  font-size:calc(24px + 0.8vw);
+  margin-top:2vw;
+  margin-bottom: 1vw;
 
-    display:none;}
-    
-  .menuversionmob{
-    display: inline;}
-    
-  .menuversionmob2 {
-      display:inline;}
-    
+}
+.menubutt{font-size:calc(14px + 0.8vw);
+  padding:0 6px 0 6px;
+
+
+}
+
+
+#btnsmenu {
+  display: inline;
+}
+.btn-hover.color-2 { display: none;}
+
+
 hr {
   margin: 10px;
 }
-  .btn-menu 
-  {
-    color: #fff;
-    border:1px solid var(--main-text-color);
-    padding: 5px;
-    position: fixed;
-    top: 5px;
-    left: 5px;
-    cursor: pointer;
-    transition: left .23s;
-    z-index: 3;
-    width: 20px;
-    --webkit-transform: translateZ(0);
-    --webkit-backface-visibility: hidden;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-  } 
-  .btn-menu span 
-  {
-    display: block;
-    height: 5px;
-    background-color: var(--main-text-color);
-    margin: 5px 0 0;
-    transition: all .1s linear .23s;
-    position: relative;
-  } 
-  .btn-menu span.first 
-  {
-    margin-top: 0;
-  }
-  .hidden-menu 
-  {
-    display: block;
-    position: fixed;
-    list-style:none;
-    padding: 50px 10px 10px;
-    margin: 0;
-    box-sizing: border-box;
-    width: calc(100px + 7vw);
-    background:repeating-linear-gradient(80deg, #ffc5ca, #cedeff);
-    height: 100%;
-    top: 0;
-    left: -200px;
-    transition: left .2s;
-    z-index: 2;
-    --webkit-transform: translateZ(0);
-    --webkit-backface-visibility: hidden;
-}
-.hidden-menu li 
-{
-    padding:10px 0;
-}
-.hidden-menu li a 
-{
-  font-size:calc(11.5px + 1.4vw);
-  color:#000;
-    padding:calc(2px + 2vw) 0px;
-}
-.hidden-menu-ticker:checked ~ .btn-menu 
-{
-  left: 160px;
-}
-.hidden-menu-ticker:checked ~ .hidden-menu 
-{
-  left: 0;
-}
-.hidden-menu-ticker:checked ~ .btn-menu span.first 
-{
-  --webkit-transform: rotate(45deg);
-  top: 10px;
-}
-.hidden-menu-ticker:checked ~ .btn-menu span.second 
-{
-  opacity: 0;
-}
-.hidden-menu-ticker:checked ~ .btn-menu span.third 
-{
-  --webkit-transform: rotate(-45deg);
-  top: -10px;
-}
-.hidden-menu-ticker 
-{
-  display: none;
-}
 
 
-#logomob, .menubuttmob{
 
-background-color: unset;
-border:unset;
-margin-top:0.8vw;
-cursor: pointer; 
-transition: all 0.3s ease-in-out;
-font-size:calc(14px + 0.8vw);
-color:var(--main-text-color);
-padding-top:10px;
-
-}
-
-.menubuttmob{
-  display: inline-block; 
-
-}
 
 .textplus {
   font-size:calc(8.2px + 1.3vw);
 
 }
-#logomob{
-  margin-left: auto;
-  margin-right: auto;
-font-family: 'Montserrat Alternates';
-font-size:calc(24px + 0.8vw);
-display: block;
 
-}
 #menubutts
 {   
   text-align: center; 
@@ -749,11 +669,6 @@ hr{
   background:repeating-linear-gradient(-90deg, var(--main-background-red-color), var(--main-background-blue-color));
 
 }
-#logomob:focus,#logomob:hover{
-  -webkit-filter: drop-shadow(0px 0px 0px );
-  filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
-.menubuttmob:hover,.menubuttmob:focus{
-  text-shadow:  -1.5px 1.5px 1.3px var(--shadows-black);}
 }
 
 
