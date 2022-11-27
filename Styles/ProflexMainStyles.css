@@ -520,6 +520,9 @@ margin-right: calc(45% - 120px) }}
       } }
 /*Настройки для маленьких экранов, где нужно переносить картинки и новое меню*/
 @media (max-width: 600px) {
+  #Stolb1 {
+    padding-left: 0;
+  }
   #ContactsHeading, .ColumnName, .BigFoot  {
     font-size: calc(2.5vw + 5px);}
   #WarningLong {
