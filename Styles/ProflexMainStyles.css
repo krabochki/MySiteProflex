@@ -369,7 +369,8 @@ margin-left:-40px;}
       inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
   }
 
-
+#Contacts {
+  display:inline-block}
 
 /*Футер*/
 .ColumnBtn{
@@ -520,11 +521,14 @@ margin-right: calc(45% - 120px) }}
       } }
 /*Настройки для маленьких экранов, где нужно переносить картинки и новое меню*/
 @media (max-width: 600px) {
-  #Stolb1 {
-    padding-left: 0;
-  }
-  #ContactsHeading, .ColumnName, .BigFoot  {
-    font-size: calc(2.5vw + 5px);}
+
+#contactsNthemesColumn {font-size: calc(9.2px + 1.5vw);}
+#Stolb1 {
+padding-left: 0;}
+#Contacts {
+  display: inline;}
+#ContactsHeading, .ColumnName, .BigFoot  {
+    font-size:  calc(9.2px + 1.5vw);}
   #WarningLong {
     display: none;}
   .footerRealBtn {
