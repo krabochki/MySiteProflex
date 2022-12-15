@@ -35,7 +35,7 @@ html {
   margin: 0;
   padding: 0;}
 body{
-  font-family: "PT Root UI", Arial;
+  font-family: "PT Root UI2", Arial;
   margin: 0;
   overflow: overlay;
   background: linear-gradient(90deg, var(--main-background-red-color), var(--main-background-blue-color));
@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
   border: none;
   background-size: 300% 100%;
   transition: all 0.4s ease-in-out;
-  font-family: "PT Root UI";}
+  font-family: "PT Root UI2";}
 .GradientButton:hover {
   background-position: 100% 0;
   transition: all 0.4s ease-in-out;}
@@ -143,7 +143,7 @@ header{
 
   }
 .MenuButton {
-  font-family: "PT Root UI";}
+  font-family: "PT Root UI2";}
 #MenuButtons {
   display: contents;
   font-size: 0px;}
