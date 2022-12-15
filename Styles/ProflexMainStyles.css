@@ -1,601 +1,354 @@
+:root {
+  --main-text-color: #0f285a;
+  --main-background-red-color: #f8a7ad;
+  --background-lighter-color: #fcd0d5;
+  --main-background-blue-color: #bfd4ff;
+  --background-lighter-color2: #d5e3ff;
+  --scrollbar-color: #9cbbff;
+  --main-blue-color: #0957f2;
+  --main-red-color: #f11328;
+  --shadows-black: #8f8f8f;
+  --main-white-color: #f8f8f8;
+  --main-padding: 1rem;
+  --p: 1rem;
+  --h1: 1.7rem;
+  --p-main: 1.15rem;
+  --h2: 1.15rem;
+  --signup:1.15rem;
+  --menu:1rem;
+  --p-secondary:0.8rem;
+  --main-marg: calc(14.5vw - 35px);
+  --foot-p:0.8rem;
+  --foot-h2:0.9rem;
+  --foot-h1:1.2rem;
+  --main-marg-top:3.3rem;}
 
-:root /*Палитра цветов*/{
-    --main-text-color: #0c214c;
-    --main-background-red-color: #f8a7ad;
-    --background-lighter-color: #fcd0d5;
-    --main-background-blue-color: #bfd4ff;
-    --background-lighter-color2: #d5e3ff;
-    --scrollbar-color: #9cbbff;
-    --main-blue-color: #0957f2; 
-    --main-red-color: #f11328;
-    --shadows-black: #8f8f8f;
-    --main-white-color: #f7f7f7;}
 
+*,*:before,*:after {
+  box-sizing: border-box;}
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;}
+html {
+  font-size: calc(18px + (24 - 18) * ((100vw - 600px) / (1920 - 600)));}
+* {
+  margin: 0;
+  padding: 0;}
+body{
+  font-family: "PT Root UI2", Arial;
+  margin: 0;
+  overflow: overlay;
+  background: linear-gradient(90deg, var(--main-background-red-color), var(--main-background-blue-color));
+  color: var(--main-text-color);}
 
-    ::selection {
-      background: rgba(255, 255, 255, 0.1); /* Safari */
-      color: #fff;
-      }
-      ::-moz-selection {
-        background: var(--main-blue-color); /* Safari */
-        color: #fff;      }
+  html {
+    position: relative;
+    min-height: 100%;
+}
 
-body /*Отступы, шрифт по умолчанию*/ {
-  font-family: 'PT Root UI',Arial;
-  margin: 0 ;  overflow: overlay;
-  background:linear-gradient(90deg, var(--main-background-red-color), var(--main-background-blue-color));
-  color:var(--main-text-color)}
+footer {  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;}
 
-#GlobalMargins,.OpenPagesCont,.InThisArticle {      
-  padding: 4px;
-  margin: 4px calc(14.5vw - 35px) 4px calc(14.5vw - 35px)}
+#GlobalMargins,.OpenPagesCont,.InThisArticle,#Menu {
+margin: 0px var(--main-marg);}
 
-/*Настройки скролл бара*/
-body::-webkit-scrollbar { 
-  width: calc(5.8px + 0.5vw);               /* ширина scrollbar */}
+body::-webkit-scrollbar {
+  width: 0.6rem;}
 body::-webkit-scrollbar-track {
-  background: transparent; /* цвет дорожки */}
+  background: transparent;
+background-color: transparent}
 body::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-color);    /* цвет плашки */
-  border-radius: 20px;       /* закругления плашки */
-  border: calc(0.9px + 0.15vw) solid #bad1fd;  /* padding вокруг плашки */}
+  background-color: var(--scrollbar-color);
+  border-radius: 1rem;
+  border: 0.15rem solid #bad1fd;}
 
-
-/*Настройки градиентных кнопок*/
-.GradientButton { /*Общие настройки*/ 
-  width:35%;
+.GradientButton {
+  width: 35%;
   color: var(--main-white-color);
-  text-align:center;
+  text-align: center;
   border: none;
   background-size: 300% 100%;
-  border-radius: 1vw;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  font-family: 'PT Root UI'; }
-.GradientButton:hover { /*При наведении*/
+  transition: all 0.4s ease-in-out;
+  font-family: "PT Root UI2";}
+.GradientButton:hover {
   background-position: 100% 0;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;}
-.GradientButton:focus { /*При фокусе*/
-  outline: none;}
-
-/*Настройка изменения курсора*/
-.MenuButton,#MenuLogo,.GradientButton,a:-webkit-any-link,.ColumnName:hover,.ColumnBtn:hover,#FootLogo,summary  {
-  cursor: pointer;} 
-
-/*Настройка ссылок*/
-a{padding:0; margin:0; height:auto; width: auto; ;
-text-decoration: none;}
-a:active,a:visited,a:-webkit-any-link,.MenuButton, #MenuLogo,#FootLogo  {
-  color:var(--main-text-color);}
-input{
-  color:var(--main-blue-color)}
-
-/*Главное меню для комп. версии*/
-.Menu,#AllPlusesCont,.PlusCont,.bn39 .bn39span {
+  transition: all 0.4s ease-in-out;}
+.MenuButton,#MenuLogo,.GradientButton,a:-webkit-any-link,.ColumnName:hover,.ColumnBtn:hover,#FootLogo,summary {
+  cursor: pointer;}
+a {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: auto;
+  text-decoration: none;}
+#Menu,#AllPlusesCont,.PlusCont {
   display: flex;}
-.MenuButton, #MenuLogo,hr {
-  border: none;}
-.MenuButton, #MenuLogo,.GradientButton.LogInColor{
-  margin-top:0.8vw;
-  font-size:calc(11px + 0.8vw);}
-.MenuButton, #MenuLogo{
-  background-color: unset;}
-.MenuButton{
-  padding-left: calc(5px + 3vw);}
-#MenuLogo,h2,.BigFoot,#FootLogo,#logomob{
+abbr {
+  text-decoration: none;}
+#MenuLogo,h2,.BigFoot,#FootLogo {
   font-variant-ligatures: none;}
+h1,#MenuLogo,h2,.PlusNum,#FootLogo {
+  font-family: "Montserrat Alternates";
+  font-weight: 700;}
+h2,h1,#p-main,#SignUpCont,p {
+  line-height: 1.3;}
+#Warning,.PlusNum,.footerRealBtn {
+  text-align: center;}
+#bull,#Bull2,.PlusCont {
+  position: relative;}
+
+.MenuButton,#MenuLogo,hr {
+  border: none;}
+.MenuButton,#MenuLogo,.GradientButton.LogInColor {
+  font-size: var(--menu);}
+.MenuButton,#MenuLogo {
+  background-color: unset;}
+.MenuButton {
+  padding-left: 2.5rem;}
+
+.GradientButton.GradientButton.LogInColor:hover{
+  box-shadow: 0px 2px 8px 0px #ffa0aa;}
 .GradientButton.LogInColor {
   background-image: linear-gradient(to right, #a81524, var(--main-red-color), #cf1f31, #77101a);
-  box-shadow: 0px 2px 8px 0px  #ffa0aa;
-  width:12%; 
-  margin-left: auto; 
-  border-radius: 0.6vw;
+  width: 11%;
+  margin-left: auto;
   font-weight: 700;
-  height:calc(12px + 1.5vw);}
-#MenuLogo:hover{
-  -webkit-filter: drop-shadow(0px 0px 0px );
-  filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
-.MenuButton:hover{
-  text-shadow:  -1.5px 1.5px 1.3px var(--shadows-black);}
-hr /*Полоса под меню*/{
-  margin: 1.2vw 0;
-  background:var(--main-background-blue-color);
-  height: 1px;}
-   .LogoPRO {
-    font-family:'Montserrat Alternates Regular'; 
-    font-weight:400;
-    font-style: normal;
-    color:var(--main-blue-color);
-   }
-
-
-
-#MrBull/*Бульдог 1 для комп. версии*/{
-  position:absolute;
-  height: calc(210px + 19vw);
-  left:calc(20px + 58vw);
-  margin-top: calc(-320px + (-500 - -320) * ((100vw - 600px) / (1920 - 600)));
-
-}
-
-input,input::-webkit-input-placeholder,#WarningLong,#WarningShort,.MenuButton
-{
-  font-family: 'PT Root UI';
-}
-h1,#MenuLogo,h2,.PlusNum ,#FootLogo {
-  font-family: 'Montserrat Alternates';
-  font-weight: 700;}
-#h1text  /*Текст под главным заголовком*/{
-  font-size:calc(11px + 0.9vw);
-  margin: 2.5% 0 3% 0;}
-#MenuButtons {display: contents;}
-h2,h1,#h1text,#SignUpCont,.h2text,.YouCanUseList {
-  line-height: 1.3;}
-
-h1,#h1text,#SignUpCont {
-  margin-right: 46%;}
-h1 /*Главный заголовок*/{
-  font-size:calc(13px + 1.4vw);}
-
-/*Форма регистрации*/
-#SignUpCont,input,.PlusNum {
-  border-radius: 1vw;}
-#SignUpCont {
-background-color: var(--background-lighter-color);}
-input{
-  margin: 3% 0 0 4%;
-  background-color: var(--main-white-color);
-  width:53%;
-  border-color:#ffc5ca;
-  border-style: solid;
-  padding-left:3%;}
-input::-webkit-input-placeholder {
-  color:#ffa0a8;}
-input:focus{
-  outline: none; /*for chrome*/
-  border-color:var(--main-blue-color);
-  box-shadow:0 0 0.5rem #508aff;}
-#WarningLong,#WarningShort{
-  margin: 0 4% 0 4%;
-  padding: 1% 0 0.7vw 0;
-  color:#ff8993;
-  font-size:calc(8px + 0.5vw);}
-#WarningLong,#WarningShort,.PlusNum,.footerRealBtn{
-  text-align:center;
+  padding:0.2rem ;
+  border-radius: 0.5rem;}
+.MenuButton:hover, #MenuLogo:hover {
+  text-shadow: -1.5px 1.5px 1.3px var(--shadows-black);}
+hr {
+  background: var(--main-background-blue-color);
+  height: 1px;
+  margin: 0 calc(14.3vw - 30px);}
+header{
+  position:sticky;
+  top:0;
+  padding-top: 0.8rem;
+  width: 100%;
+  background:linear-gradient(90deg, var(--main-background-red-color), var(--main-background-blue-color));
+  z-index: 1;}
+#Menu {
+  margin-bottom: 0.8rem;}
+#logo {
+  font-family: "Montserrat Alternates Regular";
+  font-weight: 400;
+  font-style: normal;
+  color: var(--main-blue-color);}
+  logo:focus{
+    outline: none;
+    outline-offset: 0;
 
   }
-input, .GradientButton.SignUpColor
-{
-  height: 3.9vw; 
-  font-size:calc(10px + 0.9vw);
-}
-.GradientButton.SignUpColor { /*Кнопка регистрации*/
-  background-image: linear-gradient(to right, #143371, var(--main-blue-color), #1746e2, #143371);
-  box-shadow:  0px 2px 8px 0px  rgba(10, 22, 1000, 0.45);
-  margin: 3% 0 0 3%;
-  font-weight: 700;}
+.MenuButton {
+  font-family: "PT Root UI2";}
+#MenuButtons {
+  display: contents;
+  font-size: 0px;}
 
-/*Основные заголовки*/
-h2{
-  margin-top: 6.5vw;
-  font-size:calc(13px + 0.8vw)}
-.wave{
+#p-main {
+  font-size: var(--p-main);
+  margin: 1.5rem 0;}
+h1{
+  font-size: var(--h1)}
+
+
+h2 {
+  font-size: var(--h2);
+  margin-bottom: 0.8rem;}
+section {
+  margin-top: 5rem;
+  margin-bottom:1rem;}
+section:first-child {
+  margin-top: 0px;
+  padding-top:2rem;}
+.wave {
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: var(--main-blue-color);}
-.h2text,.YouCanUseList /*Текст под главным заголовком*/{
-  margin: 2% 0 3% 0;
-  font-size:calc(10px + 0.7vw);}
+p {
+  margin: 1rem 0 0;}
 
-/*Блоки для плюсов сайта*/
-#AllPlusesCont { /*Обобщение блоков*/
-  flex-flow: row wrap;
-  justify-content: space-between;}
-.PlusNum /*Блоки с цифрами*/{
-  background-color: var(--main-background-blue-color);
-  margin-top:calc(25px + 0.2vw);
-  height: calc(25px + 2.1vw);
-  width: calc(25px + 2.1vw);
-  font-size: calc(15px + 1.3vw);
-  line-height: calc((25px + 2.1vw));
-  color:var(--main-blue-color);}
-.PlusCont /*Сам блок*/{
-  font-size: calc(8px + 0.5vw) ;
-  width:31%;
-  padding:calc(5px + 0.8vw);
-  margin:6px;
-  text-align: left;
-  overflow: hidden;
-  border-radius: 1.5vw;
-  background-color: var(--background-lighter-color);}
-.PlusNum,.PlusText{
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-}
-.PlusText{ /*Текст внутри блока*/
-  padding-left: calc(30px + 2.9vw);
-  opacity:1;
- }
+a:active,a:visited,a:-webkit-any-link {
+  color: var(--main-text-color);}
 
-/*Настройки списков*/
-.YouCanUseList {
-margin-left:-40px;}
-.YouCanUseList li {
-  background: url("../Pictures/Yes.png") no-repeat 7px 7px transparent; /* <-- change `left` & `top` too for extra control */
-  background-position:left;
-  list-style: none;
-  padding-left:  calc(33px + (40 - 33) * (100vw - 600px) / (1200 - 600));}
-.YouCanUseList p {
-  font-size:  calc(7px + (9 - 7) * (100vw - 600px) / (1200 - 600));}
-#h2textmarg /*Отступ перед 2 бульдогом*/{
-  margin-right: calc(45% - 120px) }
-#MrBull2, .PlusNum,#xz1, .btn-9:after{
-  position:absolute;
-
-}
-#MrBull2/*Бульдог 2 для комп. версии*/{
-  height: 100%;
-  left:calc(70% + 40px);
-}
-#bull,.PlusCont,.bn39,.custom-btn  {
-  position:relative;
-}
-
-.bn39 {
-  background-image: linear-gradient(90deg, var(--main-blue-color), var(--main-red-color));
-  border-radius: calc(3px + 0.8vw);
-  box-sizing: border-box;
-  color: var(--main-white-color);
-  height: calc(32px + 3.2vw);
-  font-size: calc(13px + 1.4vw);
-  font-weight: 700;
-  padding: calc(3px + 0.4vw);
-  text-decoration: none;
-  width: 7em;
-  z-index: 2;
-  font-family: "Montserrat Alternates";}
-.bn39:hover {
-  color: var(--main-white-color);}
-.bn39 .bn39span {
-  align-items: center;
-  background: var(--main-text-color);
-  border-radius: calc(3px + 0.8vw);
-  justify-content: center;
-  height: 100%;
-  transition: background 0.5s ease;
-  width: 100%;}
-.bn39:hover .bn39span {
-  background: transparent;}
-.custom-btn {
-  height: calc(32px + 3.2vw);
-  color: #fff;
-  border-radius: calc(3px + 0.8vw);
-  padding: 10px 25px;
-  width: 7em;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 700;
-  background: transparent;
-  cursor: pointer;
-  font-size: calc(13px + 1.4vw);
-  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-  7px 7px 20px 0px rgba(0,0,0,.1),
-  4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;}
-  .btn-9 {
-    border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
-  }
-  .btn-9:after {
-    content: " ";
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-     background-color: #ffffff;
-  background-image: linear-gradient(-90deg, var(--main-red-color), var(--main-blue-color) );
-    transition: all 0.7s ease;
-  }
-  .btn-9:hover {
-    background: transparent;
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-    color: #fff;
-  }
-  .btn-9:hover:after {
-    -webkit-transform: scale(2) rotate(180deg);
-    transform: scale(2) rotate(180deg);
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-  }
-
-#Contacts {
-  display:inline-block}
-
-/*Футер*/
-.ColumnBtn{
-    margin-top: 0.5vw; 
-    white-space: pre-wrap;}
-.ColumnName:hover,.ColumnBtn:hover{
-    text-shadow:  -1px 1px 1.3px var(--shadows-black);}
+.ColumnBtn {
+  margin-top: 0.5vw;
+  white-space: pre-wrap;}
+.ColumnName:hover,.ColumnBtn:hover {
+  text-shadow: -1px 1px 1.3px var(--shadows-black);}
 .ColumnName:hover {
-    color:var(--main-red-color)}
+  color: var(--main-red-color);}
 .ColumnBtn:hover {
-    color: var(--main-blue-color);}
-#footerlinks,#footerlinks:visited,.ColumnName,.ColumnBtn,.BigFoot,.footerRealBtn  {
-    color :rgb(134, 134, 134);}
-.BigFoot { 
-  width:100%;     
-  font-size: calc(0.7vmax + 7px);
+  color: var(--main-blue-color);}
+
+.BigFoot {
+  width: 100%;
+  color: rgb(134, 134, 134);
+  font-size: var(--foot-p);
   font-weight: lighter;
-  margin-top: calc(18px + 2.3vw);
-  padding: 30px calc(14.5vw - 35px) 30px calc(14.5vw - 35px);
-  height:fit-content;
+  padding: 30px var(--main-marg);
+  height: fit-content;
   background-color: rgba(255, 255, 255, 0.2);}
-.FooterColumn, .inst,.vk,.telef,.custom-btn,#MrBull2,#MrBull,summary  {
+.FooterColumn,.inst,.vk,.telef,summary,#Contacts {
   display: inline-block;}
-.FooterColumn {
-  width:fit-content;
-  height:90%;
-  margin:0px;
-  padding: 0px;}
-.footerRealBtn /*Кнопка почты и сайта*/ {
+.footerRealBtn {
   width: calc(70px + 2.8vw);
-  padding: 0.3vw 0 0.3vw 0;
+  padding: 0.3vw 0;
+  display: block;
   background-color: rgb(33, 33, 33, 0.05);
   border-radius: 100px;
-  margin-top: 0.5em;}
+  margin-top: 0.3rem;}
 .footerRealBtn:hover {
-  background-color: rgb(33, 33, 33, 0.10);
-  color:rgb(85, 85, 85);}
-#FootLogo,.footerRealBtn , .ColumnName,.ColumnBtn,.custom-btn,.MenuButton, #MenuLogo,input,summary,details p{
+  background-color: rgb(33, 33, 33, 0.1);
+  color: rgb(85, 85, 85);}
+#FootLogo,.footerRealBtn,.ColumnName,.ColumnBtn,.MenuButton,#MenuLogo,#inputSignUp,summary,details p,details ul li:hover,details[open] summary:hover {
   transition: all 0.3s ease-in-out;}
-#FootLogo ,.ColumnName, #ContactsHeading{
-  margin-bottom: 1vw;  }
-.ColumnName, #ContactsHeading {
-  font-size: calc(0.72vmax + 7.2px);}
-.ColumnName, #ContactsHeading
-{
-  font-family: 'Montserrat Alternates';}
-#FootLogo /*Логотип Профлекс*/{
-  
-  font-size: calc(0.9vmax + 14px);
+#FootLogo,.ColumnName,#ContactsHeading {
+  margin-bottom: 0.7rem;}
+.ColumnName,#ContactsHeading {
+  font-size: var(--foot-h2);
+  font-family: "Montserrat Alternates";}
+#FootLogo {
+  font-size: var(--foot-h1);
   font-style: italic;}
-#FootLogo:hover/*Наведение на логотип*/{
-  -webkit-filter: drop-shadow(0px 0px 0px );
+#FootLogo a {
+  color:var(--main-text-color) !important;}
+#FootLogo:hover {
   filter: drop-shadow(-1.6px 1.6px 0.7px var(--shadows-black));}
-*, *:before, *:after {
-  box-sizing: border-box;}
-.inst,.vk,.telef /*Размеры иконок*/ {
+.inst, .vk, .telef {
   height: 50px;
   width: 50px;
   margin-top: 0.5em;}
-.inst /*Иконка инсты*/{
+.inst {
   background-image: url("../Pictures/inst.png");}
-.telef /*Иконка телефона*/{
+.telef{
   background-image: url("../Pictures/tele.png");}
-.vk /*Иконка вк*/{
+.vk {
   background-image: url("../Pictures/vk.png");}
-
-#xz2{     
+#Author {
+  margin-top: 55px;
   text-align: right;}
-#ColumnButtons {    
-  padding-left:calc(2vw + 25px)}
-#Stolb1 {  
-    padding-left:14vw}
+.ColumnButtons {
+  padding-left: calc(2vw + 8px);}
+footer a {
+  color: rgb(134, 134, 134) !important;}
+#ThemeColumns {
+  margin: 0 auto;
+  display: flex;}
+#AllRightsReserved{
+  position: absolute;}
 
-    .footerRealBtn,.bn39 /*Кнопка почты и сайта*/ {
-      display: block;}
-      #ThemeColumns {
-        display:flex;
-      }
-      
-/*Скрытие элементов, присущих только моб. версии*/
-#MrBullTele2,#WarningShort,summary::-webkit-details-marker,summary::marker {
-  display:none;}
+summary::-webkit-details-marker,summary::marker {
+  display: none;}
 #contactsNthemesColumn {
-  display: flex;
-}
+  display: flex;}
+
+.body_hide {
+	opacity: 0;
+	transition: .9s opacity ease-in-out;}
+.body_visible {
+	opacity: 1;} 
+
+
+
+
 
 /*МЕДИА ЗАПРОСЫ*/
-/*Масштаб бульдогов*/
-@media (max-width:1067px) {
 
-  #MrBull2/*Бульдог 2 для комп. версии*/{
-    margin-top:2vw;
-    height:85%;
-    left:calc(70% + 45px);}
-  
-#h2textmarg /*Отступ перед 2 бульдогом*/{
-margin-right: calc(45% - 120px) }}
-/*Настройки для ширины когда нужно 2 строки "Почему это важно"*/
-@media (max-width: 900px) {
-  #AllPlusesCont > div {
-    width:47%;
-    margin-bottom:2%;}
-  .PlusText{
-    padding-left: calc(45px + 2.7vw);}
-  .PlusCont{
-    padding: 0 calc(3px + 2vw) 0 calc(30px+4vw);
-    font-size: calc(10px + 0.5vw) ;}
-  .GradientButton.SignUpColor,input,#SignUpCont{
-    border-radius: 1vw;}
-  #MrBull2/*Бульдог 2 для комп. версии*/{
-    margin-top:calc(3.2vw + 35px);
-    height:calc(85% - 50px);
-    left:calc(70% + 5px);}
-  #h2textmarg /*Отступ перед 2 бульдогом*/{
-    margin-right: calc(50% - 80px); }
-  .GradientButton.LogInColor{border-radius: 0.7vw;}
-  .PlusNum{
-    width: calc(25px + 2.1vw);
-    height: 70%;
-    font-size: calc(5px + 4vw);
-    color:var(--main-blue-color);
-    min-width: 53px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;}}
-/*Масштабы для футера*/
-@media (max-width:800px) {
-  #ColumnButtons {
-    padding-left:1em;}
-  #buttonstolb1 {  
-    padding-left:5em;}}
-/*Настройки для ширины когда нужна 1 строка "Почему это важно"*/
-@media (max-width: 600px) {
-  #AllPlusesCont > div {
-    width:100%;
-    margin:5px; }
-  .PlusNum{ 
-    height: 79%;
-    min-width: 0px;
-    width: calc(40px + 2.1vw);
-    font-size: calc(5px + 5.5vw);}}
-/*Настройки предупреждений...*/
-@media ((max-width:702px) and (min-width:601px)) {
-    #WarningLong{
-      display:none;}
-    #Warningshort{
-      display:block;
-      } }
-/*Настройки для маленьких экранов, где нужно переносить картинки и новое меню*/
-@media (max-width: 600px) {
+@media (max-width:1000px) {
+  :root {
+    --h1: 1.35rem;
+    --p-main:1.05rem;
+    --signup:1.05rem;}}
 
-#contactsNthemesColumn {font-size: calc(9.2px + 1.5vw);}
-#Stolb1 {
-padding-left: 0;}
-#Contacts {
-  display: inline;}
-#ContactsHeading, .ColumnName, .BigFoot  {
-    font-size:  calc(9.2px + 1.5vw);}
-  #WarningLong {
-    display: none;}
-  .footerRealBtn {
-    display: inline-block;}
-  #emailNwebsite, #IconsMob, #Contacts, #FootLogo{
-    text-align: center;}
-  .footerRealBtn {
-    padding: 5px 3px 5px 3px;
-    margin-top:10px;
-    width: calc(80px + 2.8vw);}
-  #IconsMob,#FootLogo  {
-    margin-bottom: 4vw;}
-  #FootLogo {
-    font-size: calc(5vw + 8px);}
-  #xz1 {
-    position:static;}
-  #xz2{
-    text-align: left;}
-  #MrBull  {
-    display: block;
-    margin: auto;
-    position: static;
-    height: calc(225px + 26vw);
-    left:calc(20px + 58vw);
-    margin-top: calc(20px + 2vw);}
-  #MrBull2 {
-    display: none;}
-  h1{
-    font-size:calc(9.8px + 2.2vw);
-    margin-right: 0%;
-    line-height: 1.3;
-    text-align: center; }
-  #h1text{
-    font-size:calc(10px + 1.7vw);
-    margin-right: 0%;
-    line-height: 1.3;
-    margin-bottom: 3vw;
-    text-align: center}
-  #SignUpCont {
-    overflow: hidden;
-    border-radius: 1.9vw;
-    margin-right: 0%;}
-  input{
-    width:50%;
-    border-radius:1.3vw;
-    font-size:calc(11.5px + 1.4vw);
-    height: calc(18px + 3vw);}
-  #WarningLong{
-    display: block;
-    font-size:calc(9px + 1vw);}
-  #WarningShort{
-    font-size:calc(9px + 1vw);}
-  .GradientButton.SignUpColor  {
-    height: calc(20px + 3vw);
-    border-radius: 1.3vw;
-    font-size:calc(11.5px + 1.4vw); }
-  html{
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none}
-  h2 {
-    font-size:calc(9.4px + 2vw);}
-  .h2text, .YouCanUseList {
-    font-size:calc(3px + 1.2vmax);
-    font-size:calc(9.2px + 1.5vw);}
-  #h2textmarg {
-    margin:0px;}
+@media (max-width:768px){
+
+ :root {
+    --signup:1rem;
+    --h1:1.25rem;
+    --p-main: 1rem;}
+  .MenuButton {
+    padding:0;}
+  .GradientButton.LogInColor{
+    margin-left:0;
+    width:13%}
+  #Menu {
+    justify-content: space-between;}}
+
+@media (max-width: 1300px) {
+  #ThemeColumns {
+    margin: 0;
+    margin-left: auto;
+    margin-right: 0;}}
+
+@media (max-width: 600px) {
+  :root{
+    --h1:1.3rem;
+    --p-main:1rem;
+    --signup:1rem;
+    --foot-p:0.9rem;
+    --foot-h2:1rem;
+    --foot-h1:1.5rem;}
+  html {
+    font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (600 - 320)));}
   body::-webkit-scrollbar {
     width: 0;
     height: 0;}
-  #ThemeColumns{
+
+  #MenuLogo {
+    font-size: var(--foot-h1);}
+  #Menu {
+    display: grid;
+    justify-content: center;}
+  #MenuLogo {
+    margin-bottom: 0.7rem;}
+  .MenuButton {
+    padding: 0 0.5rem;}
+  .GradientButton.LogInColor {
+    display: none;}
+  hr {
+    background: repeating-linear-gradient(-90deg, var(--main-background-red-color), var(--main-background-blue-color));}
+
+  #p-main{
+  margin: 1.2rem 0;}
+
+  #FirstColumn {
+    position: static;}
+  #Stolb1 {
+    padding-left: 0;}
+  #emailNwebsite,#IconsMob,#Contacts,#FootLogo {
+    text-align: center;}
+  .footerRealBtn {
+    padding: 5px 3px;}
+  #AllRightsReserved {
+    margin-top: 0;
+    position: static;}
+  #Author {
+    margin-top: 0;
+    text-align: left;}
+  #ThemeColumns {
+    width: fit-content;}
+  .FooterColumn,#FootLogo  {
+    margin: 0.7rem 0;
+    padding-left: 0;}
+  #FirstColumn {
+    display: block;}
+  .FooterColumn{
+    padding-left:0.25rem;
+    padding-right:0.25rem;
+  }
+  #contactsNthemesColumn,#MenuButtons,#firsttext,#Contacts {
+    display: inline;}
+  .footerRealBtn,.FooterColumn {
+    display: inline-block;}
+  h1, #p-main, #SignUpCont, #ThemeColumns,#MrBull, #FirstColumn {
     text-align: center;
     margin-left: auto;
-    margin-right:auto;
-    width:fit-content}
-  .FooterColumn {
-    display: inline-block;
-    margin: 2vw 0 2vw 0;
-    padding-left: 0;}
-  #MrBullTele2 {
-    display:block;
-    margin: auto;      
-    height: calc(150px + 26vw);
-    margin-top: calc(20px + 2vw);}
-  #MenuLogo {
-    display:flexbox;}
-  .Menu {
-    display: grid;
-    margin-left: auto;
-    margin-right: auto;
-  text-align: center;}
-  #MenuLogo {
-    font-family: 'Montserrat Alternates';  font-size:calc(24px + 0.8vw);
-    margin-top:2vw;
-    margin-bottom: 1vw;}
-  .MenuButton{
-    font-size:calc(14px + 0.8vw);
-    padding:0 6px 0 6px;}
-  #MenuButtons {
-    display: inline;}
-  .GradientButton.LogInColor { 
-    display: none;}
-  .PlusText {
-    font-size:calc(8.2px + 1.3vw);}
-  #FirstColumn {
-  margin: auto;
-  display: block;}
-  #contactsNthemesColumn{
-    display: inline;}
-  hr{
-    background:repeating-linear-gradient(-90deg, var(--main-background-red-color), var(--main-background-blue-color));
-    margin: 10px;}}
-@media (max-width:400px) {
-  #WarningLong{
-    display:none;}
-  #WarningShort{
-    display:block;}}
-
+    margin-right: auto;}
+  h1, #p-main, #SignUpCont {
+  width:90%;}
+  #inputSignUp, .GradientButton.SignUpColor {
+    height: calc(var(--signup)*2.5);}}
